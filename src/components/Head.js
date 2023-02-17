@@ -1,15 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
 // import { ArrowLeft } from "phosphor-react";
 
 const Head = () => {
   const el = useRef(null);
   const typed = useRef(null);
-
-  // const [open, setOpen] = useState(false);
-  // const handleHamburger = () => {
-  //   setOpen(true);
-  // };
 
   const current = new Date().toLocaleString("en-US", {
     weekday: "long",
