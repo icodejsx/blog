@@ -6,11 +6,6 @@ import Head from "./Head";
 const NavBar = () => {
   const navigate = useNavigate();
 
-  const [open, setOpen] = useState(false);
-  const handleHamburger = () => {
-    setOpen(true);
-  };
-
   return (
     <section>
       <Head />
@@ -20,19 +15,12 @@ const NavBar = () => {
             to="/"
             className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-            </svg>
-            <span className="ml-3 text-xl">Tailwind Snippets</span>
+            <span className="ml-3 text-xl">
+              <img
+                src="https://vectorwiki.com/images/id-946-digiplus-logo.svg"
+                alt=""
+              />
+            </span>
           </Link>
           <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
             <Link to="/" className="mr-5 hover:text-gray-900">

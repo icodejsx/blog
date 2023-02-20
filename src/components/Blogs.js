@@ -6,7 +6,7 @@ const Blogs = () => {
   return (
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-wrap w-full mb-20">
+        <d iv className="flex flex-wrap w-full mb-20">
           <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
               Todays General Hot News 🔥🔥🔥
@@ -19,9 +19,9 @@ const Blogs = () => {
             haven't heard of them man bun deep jianbing selfies heirloom prism
             food truck ugh squid celiac humblebrag.
           </p>
-        </div>
+        </d>
         <div className="grid md:grid-cols-3 gap-12 ">
-          {BlogList.map((blogList, index) => (
+          {BlogList.slice(0, 6).map((blogList, index) => (
             <div
               className="p-4 border border-indigo-500/20 shadow-sm :hover-shadow-xl"
               key={index}
@@ -58,7 +58,7 @@ const Blogs = () => {
                     : blogList.body}
                 </p>
                 <Link
-                  to={`/post/${blogList.id}`}
+                  to={`/posts/${blogList.id}`}
                   className="bg-indigo-500 px-6 py-2 mt-3 inline-block rounded text-white"
                 >
                   Read More
@@ -66,6 +66,13 @@ const Blogs = () => {
               </div>
             </div>
           ))}
+        </div>
+        <div className="flex flex-wrap w-full mb-20">
+          <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
+            <h1 className=" sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
+              Sport News 🤾🏿🤾🏿
+            </h1>
+          </div>
         </div>
       </div>
     </section>
