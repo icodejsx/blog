@@ -62,18 +62,18 @@ const Head = () => {
             <ArrowRight size={20} />
           </div>
         </div>
-        <div clas>
-          <FacebookLogo size={20} />
-        </div>
 
-        <WhatsappLogo size={20} />
-        <TiktokLogo size={20} />
-        <Cloud size={20} />
-        <InstagramLogo size={20} />
-        <User size={20} />
+        <FacebookLogo size={20} className=" hover:text-blue-700" />
 
-        <Basketball size={20} />
-        <List size={20} />
+        <WhatsappLogo size={20} className=" hover:text-blue-500" />
+
+        <Basketball size={20} className=" hover:text-red-500" />
+        <Cloud size={20} className=" hover:text-red-500" />
+        <InstagramLogo size={20} className=" hover:text-red-500" />
+
+        <TiktokLogo size={20} className=" hover:text-red-500" />
+        <User size={20} className=" hover:text-blue-700" />
+        <List size={20} className=" hover:text-blue-700" />
       </div>
     </div>
   );
