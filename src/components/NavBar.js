@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { Link, useNavigate } from "react-router-dom";
 import Head from "./Head";
+import Nav from "./Nav";
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -10,19 +11,15 @@ const NavBar = () => {
     <section>
       <Head />
       <header className="text-gray-600 body-font border-b border-slate-900  f">
-        <div className="container mx-auto flex flex-wrap p-5 md:flex-col items-start  h-auto justify-start">
+        <div className="container mx-auto flex flex-wrap p-5 md:flex-col items-start  h-auto justify-start gap-3">
           <div className="flex flex-row  gap-20 justify-between w-full items-center">
             <div>
               <Link
                 to="/"
                 className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
               >
-                <span className="ml-3 text-xl">
-                  <img
-                    src="https://vectorwiki.com/images/id-946-digiplus-logo.svg"
-                    alt=""
-                  />
-                </span>
+                <h1 className="text-7xl font-bold ">Jannah</h1>
+                <sub className="text-4xl  text-slate-400 font-medium">news</sub>
               </Link>
             </div>
 
@@ -53,20 +50,7 @@ const NavBar = () => {
           </div>
 
           <div>
-            <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center gap-3">
-              <Link to="/" className="mr-5 hover:text-gray-900">
-                Home
-              </Link>
-              <Link to="/host" className="mr-5 hover:text-gray-900">
-                Host
-              </Link>
-              <Link to="/about" className="mr-5 hover:text-gray-900">
-                About Us
-              </Link>
-              <Link to="/contact" className="mr-5 hover:text-gray-900">
-                Contact Us
-              </Link>
-            </nav>
+            <Nav />
           </div>
         </div>
       </header>
