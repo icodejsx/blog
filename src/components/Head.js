@@ -45,7 +45,7 @@ const Head = () => {
   }, []);
 
   return (
-    <div className="hidden md:flex flex-row px-10 bg-yellow-400 gap-2 justify-between ">
+    <div className="hidden md:flex flex-row px-10 gap-2 justify-between border bottom-15 ">
       <div className="flex flex-row justify-center items-start  w-50">
         <div className="py-2">🕧{current}</div>
         <span className="bg-red-800 text-white inline p-2">Braking News</span>
