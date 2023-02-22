@@ -49,7 +49,7 @@ const NavBar = () => {
             </div>
           </div>
 
-          <div>
+          <div className="w-full">
             <Nav />
           </div>
         </div>
