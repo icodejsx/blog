@@ -1,18 +1,24 @@
-import React from "react";
-import { Handbag, Moon } from "phosphor-react";
+import React, { useState } from "react";
+import { Handbag, Moon, X, MagnifyingGlass, List } from "phosphor-react";
 import { Link, useNavigate } from "react-router-dom";
 import myGif from "../assets/cloud.gif";
 
 function Nav() {
+  const [navOpen, setNavOpen] = useState(false);
+
+  const handleHambuger = () => {
+    setNavOpen(!navOpen);
+  };
+
   return (
     <div>
-      <nav className="md:ml-auto flex flex-row flex-wrap items-center  justify-between g bg-black p-1 w-full">
+      <nav className=" md:ml-auto md:flex flex-row md:flex-wrap md:items-center hidden  justify-between  bg-black md:p-1 w-full">
         <div className="flex flex-row gap-30 justify-center items-center">
           <button
             id="dropdownHoverButton"
             data-dropdown-toggle="dropdownHover"
             data-dropdown-trigger="hover"
-            className="text-white  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 active:static"
+            className="text-whit focus:outline-none font-medium text text-sm px-4 py-2.5 text-center inline-flex items-center  "
             type="button"
           >
             HOME
@@ -149,6 +155,54 @@ function Nav() {
                 />
               </div>
             </form>
+          </div>
+        </div>
+      </nav>
+
+      {/* navbar  mobile responsive  */}
+
+      <nav className="md:hidden ">
+        <div className="flex flex-row justify-between items-center  p-4 bg-slate-100 shadow-lg w-full">
+          <div className="flex flex-row gap-3 text-lg items-center">
+            <div onClick={handleHambuger}>
+              {navOpen ? <X size={30} /> : <List size={30} />}
+            </div>
+
+            <MagnifyingGlass size={23} />
+          </div>
+          <div className="flex flex-row items-center ">
+            <h1 className=" font-extrabold text-3xl ">Jonnah</h1>
+            <sub className=" text-slate-400 font-medium text-xl">news</sub>
+          </div>
+          <div className="flex flex-row gap-4 ">
+            <Handbag size={25} className="text-black" />
+
+            <Moon size={25} />
+          </div>
+        </div>
+
+        <div
+          className="flex flex-row justify-between   h-70 items-center container p-1 px-6 gap-2  mt-3 text-[5px]"
+          style={{
+            backgroundImage: `url(${"https://media.istockphoto.com/id/1360408960/vector/realistic-starry-night-sky-galaxy-background-abstract-constellation-background-with-nebula.jpg?s=612x612&w=0&k=20&c=jRiMFd_-cW1i1eKvSDbNEpR6pf2xiwtIorKjV4N3z0k="})`,
+          }}
+        >
+          <div className="flex flex-row  w-full text-white items-center justify-start   gap-3 content-start">
+            <div className=" flex flex-col justify-end text-end font-thin text-[5px]  ">
+              <p className=" text-[12px] font-bold ">ADS</p>
+              <p className="">720 x 90 Area!</p>
+            </div>
+            <div className="w-70 font-thin text-xs  text-[10px]  w-40  ">
+              <p>
+                Jannah Responsive Newspaper {"\n"}
+                and Magazine Wordpress Theme
+              </p>
+            </div>
+          </div>
+          <div>
+            <button className=" bg-blue-600 text-white text-center w-[6rem] p-1 text-[10px] font-thin items-center">
+              PURSCHASE NOW
+            </button>
           </div>
         </div>
       </nav>
