@@ -8,11 +8,11 @@ const NavBar = () => {
   const navigate = useNavigate();
 
   return (
-    <section>
+    <section className=" ">
       <Head />
-      <header className="text-gray-600 body-font border-b border-slate-900  f">
-        <div className="container mx-auto flex flex-wrap p-5 md:flex-col items-start  h-auto justify-start gap-3">
-          <div className="flex flex-row  gap-20 justify-between w-full items-center">
+      <header className=" md:text-gray-600 md:body-font md:border-b  border-slate-900   f">
+        <div className=" md:container mx-auto flex flex-wrap md:p-5 md:flex-col items-start  h-auto justify-start gap-3">
+          <div className=" md:flex flex-row  md:gap-20 md:justify-between hidden md:w-full md:items-center">
             <div>
               <Link
                 to="/"

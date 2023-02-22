@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import About from "./components/About";
 import BlogDetails from "./components/BlogDetails";
@@ -19,6 +19,42 @@ function App() {
       duration: 0,
     });
   }, [directory.pathname]);
+
+  // toggle or Light and dark mode
+  const [theme, setTheme] = useState("light");
+
+  // if the local storage is empty save theme as light
+  useEffect(() => {
+    if (localStorage.getItem("theme") === "light") {
+      localStorage.setItem("theme", "light");
+    }
+  }, []);
+
+  //
+  useEffect(() => {
+    // select html element
+    const html = document.querySelector("html");
+    //add or remove class dark in html element according to theme in localstorage.
+    if (localStorage.getItem("theme") === "dark") {
+      html.classList.add("dark");
+      setTheme("dark");
+    } else {
+      html.classList.remove("dark");
+      setTheme("light");
+    }
+  }, [theme]);
+
+  // Function  to Handle switch  them
+  const handelThemeSwitch = () => {
+    if (localStorage.getItem("theme") === "dark") {
+      setTheme("dark");
+      localStorage.removeItem("theme", "dark");
+    } else {
+      setTheme("light");
+      localStorage.removeItem("theme", "light");
+    }
+  };
+
   return (
     <div className="bg-slate-100 w-full h-auto">
       <NavBar />
