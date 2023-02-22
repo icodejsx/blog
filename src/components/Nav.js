@@ -12,8 +12,15 @@ function Nav() {
 
   return (
     <div>
-      <nav className=" md:ml-auto md:flex flex-row md:flex-wrap md:items-center hidden  justify-between  bg-black md:p-1 w-full">
-        <div className="flex flex-row gap-30 justify-center items-center">
+      <nav
+        className={` md:ml-auto md:flex md:flex-row md:flex-wrap md:items-center  flex flex-col md:justify-between  bg-black md:p-1 md:w-full  transition-all decoration-20 top-0 pl-8  ease-in-out duration-9000 ${
+          navOpen ? "left-[10] w-full text-white absolute h-full" : "hidden"
+        }`}
+      >
+        <div className="md:flex md:flex-row gap-30 md:justify-center items-center flex flex-col justify-between gap-10 ">
+          <div onClick={handleHambuger}>
+            {navOpen ? <X size={30} /> : <List size={30} />}
+          </div>
           <button
             id="dropdownHoverButton"
             data-dropdown-toggle="dropdownHover"
@@ -101,7 +108,7 @@ function Nav() {
             FEATURES
           </Link>
         </div>
-        <div className="flex flex-row gap-4 w-auto items-center">
+        <div className="md:flex md:flex-row md:gap-4 md:w-auto items-center flex flex-col gap-3">
           <div className="flex flex-row items-center  text-white gap-3">
             <div className="flex flex-row items-center">
               <img src={myGif} alt="" className="w-11" />{" "}
@@ -170,6 +177,7 @@ function Nav() {
 
             <MagnifyingGlass size={23} />
           </div>
+
           <div className="flex flex-row items-center ">
             <h1 className=" font-extrabold text-3xl ">Jonnah</h1>
             <sub className=" text-slate-400 font-medium text-xl">news</sub>
@@ -200,7 +208,7 @@ function Nav() {
             </div>
           </div>
           <div>
-            <button className=" bg-blue-600 text-white text-center w-[6rem] p-1 text-[10px] font-thin items-center">
+            <button className="bg-blue-600 text-white text-center w-[6rem] p-1 text-[10px] font-thin items-center">
               PURSCHASE NOW
             </button>
           </div>
