@@ -15,7 +15,7 @@ function Nav() {
       <nav
         className={` lg:ml-auto lg:flex lg:flex-row lg:flex-wrap lg:items-center   flex flex-col lg:justify-between  bg-black lg:p-1 lg:w-full  transition-all decoration-20 top-0 pl-8  ease-in-out duration-9000 ${
           navOpen
-            ? "left-[10] w-full text-white absolute h-screen  pt-4 transition-all overflow-x-auto  overflow-hidden "
+            ? "left-[10] w-full text-white  h-screen  pt-4 transition-all overflow-x-auto  overflow-hidden "
             : "hidden"
         }`}
       >
@@ -23,30 +23,32 @@ function Nav() {
           <div onClick={handleHambuger} className="lg:hidden items-center ">
             {navOpen ? <X size={30} /> : <List size={30} />}
           </div>
-          <button
-            id="dropdownHoverButton"
-            data-dropdown-toggle="dropdownHover"
-            data-dropdown-trigger="hover"
-            className="text-whit focus:outline-none font-medium text text-sm px-4 py-2.5 text-center inline-flex items-center  "
-            type="button"
-          >
-            HOME
-            <svg
-              className="w-4 h-4 ml-2"
-              aria-hidden="true"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
+          <Link to="/">
+            <button
+              id="dropdownHoverButton"
+              data-dropdown-toggle="dropdownHover"
+              data-dropdown-trigger="hover"
+              className="text-whit focus:outline-none font-medium text text-sm px-4 py-2.5 text-center inline-flex items-center  "
+              type="button"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 9l-7 7-7-7"
-              ></path>
-            </svg>
-          </button>
+              HOME
+              <svg
+                className="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+          </Link>
           {/* <!-- Dropdown menu --> */}
           <div
             id="dropdownHover"
@@ -174,11 +176,12 @@ function Nav() {
 
             <MagnifyingGlass size={23} />
           </div>
-
-          <div className="flex flex-row items-center ">
-            <h1 className=" font-extrabold text-3xl ">Jonnah</h1>
-            <sub className=" text-slate-400 font-medium text-xl">news</sub>
-          </div>
+          <Link to="/">
+            <div className="flex flex-row items-center ">
+              <h1 className=" font-extrabold text-3xl ">Jonnah</h1>
+              <sub className=" text-slate-400 font-medium text-xl">news</sub>
+            </div>
+          </Link>
           <div className="flex flex-row gap-4 ">
             <Handbag size={25} className="text-black" />
 
@@ -187,17 +190,17 @@ function Nav() {
         </div>
 
         <div
-          className="flex flex-row justify-between h-70 items-center p-1 px-6 gap-2  mt-3 text-[5px]"
+          className="flex flex-row justify-between h-70 items-center p-2 px-1 md:px-6 gap-2  mt-3 text-[5px]"
           style={{
             backgroundImage: `url(${"https://media.istockphoto.com/id/1360408960/vector/realistic-starry-night-sky-galaxy-background-abstract-constellation-background-with-nebula.jpg?s=612x612&w=0&k=20&c=jRiMFd_-cW1i1eKvSDbNEpR6pf2xiwtIorKjV4N3z0k="})`,
           }}
         >
-          <div className="flex flex-row  w-full text-white items-center justify-start   gap-3 content-start">
+          <div className="flex flex-row  w-full text-white items-center justify-start gap-3 content-start   ">
             <div className=" flex flex-col justify-end text-end font-thin text-[5px]  ">
               <p className=" text-[12px] font-bold ">ADS</p>
               <p className="">720 x 90 Area!</p>
             </div>
-            <div className="w-70 font-thin text-xs  text-[10px]  w-40  ">
+            <div className="w-70 font-thin text-xs  text-[9px]  w-40  ">
               <p>
                 Jannah Responsive Newspaper {"\n"}
                 and Magazine Wordpress Theme
