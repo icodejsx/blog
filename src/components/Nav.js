@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Handbag, Moon, X, MagnifyingGlass, List } from "phosphor-react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import myGif from "../assets/cloud.gif";
 
 function Nav() {
@@ -13,12 +13,14 @@ function Nav() {
   return (
     <div>
       <nav
-        className={` md:ml-auto md:flex md:flex-row md:flex-wrap md:items-center  flex flex-col md:justify-between  bg-black md:p-1 md:w-full  transition-all decoration-20 top-0 pl-8  ease-in-out duration-9000 ${
-          navOpen ? "left-[10] w-full text-white absolute h-full" : "hidden"
+        className={` lg:ml-auto lg:flex lg:flex-row lg:flex-wrap lg:items-center   flex flex-col lg:justify-between  bg-black lg:p-1 lg:w-full  transition-all decoration-20 top-0 pl-8  ease-in-out duration-9000 ${
+          navOpen
+            ? "left-[10] w-full text-white absolute h-screen  pt-4 transition-all overflow-x-auto  overflow-hidden "
+            : "hidden"
         }`}
       >
-        <div className="md:flex md:flex-row gap-30 md:justify-center items-center flex flex-col justify-between gap-10 ">
-          <div onClick={handleHambuger}>
+        <div className="lg:flex lg:flex-row gap-30 lg:justify-center items-center flex flex-col justify-between gap-10 ">
+          <div onClick={handleHambuger} className="lg:hidden items-center ">
             {navOpen ? <X size={30} /> : <List size={30} />}
           </div>
           <button
@@ -108,7 +110,7 @@ function Nav() {
             FEATURES
           </Link>
         </div>
-        <div className="md:flex md:flex-row md:gap-4 md:w-auto items-center flex flex-col gap-3">
+        <div className="lg:flex lg:flex-row lg:gap-4 lg:w-auto items-center flex flex-col gap-3">
           <div className="flex flex-row items-center  text-white gap-3">
             <div className="flex flex-row items-center">
               <img src={myGif} alt="" className="w-11" />{" "}
@@ -119,11 +121,6 @@ function Nav() {
                   <sup className="font-extrabold">.</sup>c
                 </sup>
               </p>
-            </div>
-
-            <div className="flex flex-row gap-2">
-              <Handbag size={20} color="#ffffff" />
-              <Moon size={20} color="#ffffff" />
             </div>
           </div>
 
@@ -168,7 +165,7 @@ function Nav() {
 
       {/* navbar  mobile responsive  */}
 
-      <nav className="md:hidden ">
+      <nav className="lg:hidden ">
         <div className="flex flex-row justify-between items-center  p-4 bg-slate-100 shadow-lg w-full">
           <div className="flex flex-row gap-3 text-lg items-center">
             <div onClick={handleHambuger}>
@@ -190,7 +187,7 @@ function Nav() {
         </div>
 
         <div
-          className="flex flex-row justify-between   h-70 items-center container p-1 px-6 gap-2  mt-3 text-[5px]"
+          className="flex flex-row justify-between h-70 items-center p-1 px-6 gap-2  mt-3 text-[5px]"
           style={{
             backgroundImage: `url(${"https://media.istockphoto.com/id/1360408960/vector/realistic-starry-night-sky-galaxy-background-abstract-constellation-background-with-nebula.jpg?s=612x612&w=0&k=20&c=jRiMFd_-cW1i1eKvSDbNEpR6pf2xiwtIorKjV4N3z0k="})`,
           }}
