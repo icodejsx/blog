@@ -10,13 +10,13 @@ const NavBar = () => {
   return (
     <section className=" ">
       <Head />
-      <header className=" md:text-gray-600 md:body-font md:border-b  border-slate-900   f">
-        <div className=" md:container mx-auto flex flex-wrap md:p-5 md:flex-col items-start  h-auto justify-start gap-3">
-          <div className=" md:flex flex-row  md:gap-20 md:justify-between hidden md:w-full md:items-center">
+      <header className=" lg:text-gray-600 lg:body-font lg:border-b  border-slate-900   f">
+        <div className=" lg:container mx-auto flex flex-wrap lg:p-5 lg:flex-col items-start  h-auto justify-start gap-3">
+          <div className=" lg:flex flex-row  lg:gap-20 lg:justify-between hidden lg:w-full lg:items-center">
             <div>
               <Link
                 to="/"
-                className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+                className="flex title-font font-medium items-center text-gray-900 mb-4 lg:mb-0"
               >
                 <h1 className="text-7xl font-bold ">Jannah</h1>
                 <sub className="text-4xl  text-slate-400 font-medium">news</sub>
