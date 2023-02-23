@@ -5,12 +5,15 @@ import { Link } from "react-router-dom";
 const DropDown = () => {
   return (
     <div>
-      <section className="text-gray-600 body-font">
+      <section className="text-gray-600 body-font hidden lg:flex">
         <div className="container px-5 py-24 mx-auto ">
-          {BlogList.slice(0, 2).map((blog, index) => (
-            <div className="flex flex-wrap flex-row -m-4" key={index}>
-              <div className="p-4 md:w-1/5">
-                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+          <div className="flex flex-wrap flex-row -m-4">
+            {BlogList.slice(0, 5).map((blog, index) => (
+              <div
+                className="p-1 md:w-1/5 flex  flex-row  items-center"
+                key={index}
+              >
+                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden  ">
                   <img
                     className="lg:h-40 md:h-20 w-full object-cover object-center"
                     src={blog.img}
@@ -50,8 +53,8 @@ const DropDown = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
     </div>

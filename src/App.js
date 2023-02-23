@@ -10,7 +10,8 @@ import Host from "./components/Host";
 import NavBar from "./components/NavBar";
 import Post from "./components/Post";
 import SignUp from "./components/SignUp";
-import DropDown from "./components/dropDown/DropDown";
+
+import World from "./components/WORLD/World";
 
 function App() {
   const directory = useLocation();
@@ -68,7 +69,7 @@ function App() {
         <Route path="/host" element={<Host />} />
         <Route path="/signup" element={<SignUp />} />
       </Routes>
-      <DropDown />
+      <World />
     </div>
   );
 }
