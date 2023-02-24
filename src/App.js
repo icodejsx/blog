@@ -11,7 +11,7 @@ import NavBar from "./components/NavBar";
 import Post from "./components/Post";
 import SignUp from "./components/SignUp";
 
-import World from "./components/WORLD/World";
+import World from "./components/movie/World";
 
 function App() {
   const directory = useLocation();
