@@ -51,7 +51,7 @@ function Nav() {
             </button>
           </Link>
           {/* <!-- Dropdown menu --> */}
-          <div id="dropdownHover" className="z-10 hidden w-full">
+          <div id="dropdownHover" className="z-10 hidden w-full  ">
             <World />
           </div>
 
