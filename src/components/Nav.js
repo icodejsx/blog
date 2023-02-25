@@ -14,9 +14,9 @@ function Nav() {
   return (
     <div>
       <nav
-        className={` lg:ml-auto lg:flex lg:flex-row lg:flex-wrap lg:items-center   flex flex-col lg:justify-between  bg-black lg:p-1 lg:w-full  transition-all decoration-20 top-0 pl-8  ease-in-out duration-9000 ${
+        className={`lg:ml-auto lg:flex lg:flex-row lg:flex-wrap lg:items-center flex flex-col lg:justify-between bg-black lg:p-1 lg:w-full decoration-20 top-0 pl-8 ${
           navOpen
-            ? "left-[10] w-full text-white  h-screen  pt-4 transition-all overflow-x-auto  overflow-hidden "
+            ? "fixed left-0 w-full text-white h-screen pt-4 overflow-x-auto overflow-hidden transition-all duration-100 ease-out"
             : "hidden"
         }`}
       >
@@ -51,7 +51,7 @@ function Nav() {
             </button>
           </Link>
           {/* <!-- Dropdown menu --> */}
-          <div id="dropdownHover" className="z-10 hidden   w-3/4  ">
+          <div id="dropdownHover" className="z-10 hidden w-full">
             <World />
           </div>
 
