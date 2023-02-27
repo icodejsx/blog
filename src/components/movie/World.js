@@ -14,7 +14,7 @@ const World = () => {
             <button className="bg-black hover:bg-blue-700 px-4 news">
               News
             </button>
-            <div className=" absolute z-10 left-0 mt-2  w-[77.5rem] dropdown-menu hidden mx-[-1.2rem] ">
+            <div className=" absolute z-10 left-0 mt-2  w-[77.5rem] dropdown-menu hidden mx-[-1.2rem] show-on-load ">
               <div className="bg-black text-white py-2 rounded-md flex flex-row items-center justify-center ">
                 <Link to="" className="block px-4 py-2 ">
                   <DropDown />

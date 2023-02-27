@@ -5,6 +5,15 @@
 .dropdown:hover .dropdown-menu {
   display: flex;
 }
-.news .dropdown .dropdown-menu {
-  display: hidden;
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown .dropdown-menu {
+  display: none;
+}
+
+.dropdown .show-on-load {
+  display: block;
 }
