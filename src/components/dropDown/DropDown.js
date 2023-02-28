@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { BlogList } from "../../Data/BlogData";
 import { Link } from "react-router-dom";
 
-const DropDown = () => {
+const DropDown = ({ typ = "Newss" }) => {
+  const type = typ;
+  console.log(type);
+
+  const [post, setPost] = useState();
+
+  // const other = BlogList.filter((blog) => blog.type === type);
+
   return (
     <div>
       <section className="text-gray-600 body-font hidden lg:flex ">

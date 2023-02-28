@@ -43,7 +43,7 @@ export const BlogList = [
     id: 3005,
     title:
       "'The person you are tapping from her blessings might be sleeping with dogs to make money' - Nigerian Catholic priest advises people to take pride in honest labour",
-    type: "General",
+    type: "create",
     time: "May 02",
     author: "LuvlyGist",
     img: "https://static.netnaija.com/i/xM6K58nGNyE.jpg",
@@ -54,7 +54,7 @@ export const BlogList = [
     id: 3006,
     title:
       "Eid-el-fitr & Workers' Day: FG declares Monday, Tuesday as public holidays",
-    type: "General",
+    type: "create",
     time: "Apr 29",
     author: "LuvlyGist",
     img: "https://static.netnaija.com/i/zxG7ZlmjNq2.jpg",
@@ -65,7 +65,7 @@ export const BlogList = [
     id: 3007,
     title:
       "'I went to Shiloh because of this. I prayed, I begged.''- Nigerian man mourns death of his woman who died after battling cancer",
-    type: "General",
+    type: "create",
     time: "Mar 28",
     author: "LuvlyGist",
     img: "https://static.netnaija.com/i/AqgKGEnMar1.webp",
@@ -76,7 +76,7 @@ export const BlogList = [
     id: 3008,
     title:
       "Report police officers who stop you to ask for tinted glass permit - Acting Police PRO, Olumuyiwa Adejobi, tells Nigerians",
-    type: "General",
+    type: "create",
     time: "Mar 20",
     author: "LuvlyGist",
     img: "https://static.netnaija.com/i/gVpagDbRNwO.jpg",
@@ -86,7 +86,7 @@ export const BlogList = [
   {
     id: 3009,
     title: "FG directs filmmakers to avoid money ritual contents",
-    type: "General",
+    type: "create",
     time: "Feb 21",
     author: "LuvlyGist",
     img: "https://static.netnaija.com/i/1xYNeDj2aLJ.jpg",
@@ -97,7 +97,7 @@ export const BlogList = [
     id: 3010,
     title:
       "Nigerian dad overjoyed after his daughter gifted him a new phone (video)",
-    type: "General",
+    type: "world",
     time: "Feb 18",
     author: "LuvlyGist",
     img: "https://static.netnaija.com/i/m9z7o23JK2r.jpg",
@@ -107,7 +107,7 @@ export const BlogList = [
   {
     id: 3011,
     title: "Passengers disrupt Arik operation over cancelled flight (video)",
-    type: "General",
+    type: "world",
     time: "Feb 18",
     author: "LuvlyGist",
     img: "https://static.netnaija.com/i/1qdNVLYp74g.jpg",
@@ -118,7 +118,7 @@ export const BlogList = [
     id: 3012,
     title:
       "Man learns to do makeup so he can beautify his wife who lost her arms and leg during childbirth",
-    type: "General",
+    type: "world",
     time: "Feb 14",
     author: "LuvlyGist",
     img: "https://static.netnaija.com/i/g3M73Wo179y.jpg",
@@ -129,7 +129,7 @@ export const BlogList = [
     id: 3013,
     title:
       "Journalist rents a billboard to appreciate her husband on Valentine",
-    type: "General",
+    type: "world",
     time: "Feb 14",
     author: "LuvlyGist",
     img: "https://static.netnaija.com/i/9bVNrA22aWv.png",
@@ -140,7 +140,7 @@ export const BlogList = [
     id: 3014,
     title:
       "People from where I come from are more concerned with how actress Rahama Sadau dresses than with people losing their lives to terrorism - Journalist Aliyu Dahiru",
-    type: "General",
+    type: "world",
     time: "Feb 08",
     author: "LuvlyGist",
     img: "https://static.netnaija.com/i/5wPKLoDZNVB.jpg",
@@ -151,7 +151,7 @@ export const BlogList = [
     id: 3015,
     title:
       "Residents flee their homes in droves after bandit attacked their communities in Niger state (video)",
-    type: "General",
+    type: "food",
     time: "Feb 08",
     author: "LuvlyGist",
     img: "https://static.netnaija.com/i/Aq2NAQ23NzJ.jpg",
@@ -162,7 +162,73 @@ export const BlogList = [
     id: 3016,
     title:
       "Top 10 States In Nigeria With The Most Beautiful Girls - Do You Agree?",
-    type: "General",
+    type: "food",
+    time: "Mar 09, 2018",
+    author: "Tayo",
+    img: "https://img.netnaija.com/hsi/aHR0cHM6Ly8xLmJwLmJsb2dzcG90LmNvbS8tcVVKV1RIeDJCTkEvV3FIUnBHM3lRSUkvQUFBQUFBQUFKOWMvTmxsbENrVEJWZ1FSUzlTU0tVNEJNaE9MbWdQZUZBOU5nQ0xjQkdBcy9zNjQwL1RvcCUyQjEwLmpwZw==/images/Top%2B10.jpg",
+    body: "Nigeria is arguably endowed with the most beautiful chicks in Africa. Within Nigeria itself, there are awesomely beautiful damsels. But some states can pride to have them in higher concentration than others. Now, Let's hit the market with my well-researched list.",
+    comments: [],
+  },
+  {
+    id: 3015,
+    title:
+      "Residents flee their homes in droves after bandit attacked their communities in Niger state (video)",
+    type: "food",
+    time: "Feb 08",
+    author: "LuvlyGist",
+    img: "https://static.netnaija.com/i/Aq2NAQ23NzJ.jpg",
+    body: "Residents of over five communities along the Kontagora-Rijau road in Mariga and Rijau local government areas of Niger State have fled their homes following recent attacks carried out by bandits. A video shared online shows men and women with their children in lorries and also on motorcycles as they fled with their belongings. Over the weekend, the terrorists attacked Dusai village, which is a few kilometers away from Kontagora town on Sunday afternoon, February 6, while Kuimo, which is close to Rijau gown was attacked around 4 pm on the same day, allegedly killing over 44 persons including a blind. The fear of more attacks from the bandits has caused the villagers to flee their homes. One of the fleeing residents who gave her name as Fal'ai Danladi said as she was running, she fell several times and injured her fingers, however, she was helped to Rijau by a motorist. Another fleeing resident from Warare community, Aliyu Bello said that he decided to run because he knew that if he were abducted, it won't be easy on him. He said that all of them in the community have deserted the community due to fear of attack adding that while some found their way to Rijau, others ran into the bushes and rocks to hide. Confirming the recent attack, the chairman of Rijau Local Government Council, Bello Bako, said he and his officials are working out ways to ensure that the fleeing residents get somewhere to stay. The state government or the police is yet to comment on this recent development.",
+    comments: [],
+  },
+  {
+    id: 3016,
+    title:
+      "Top 10 States In Nigeria With The Most Beautiful Girls - Do You Agree?",
+    type: "food",
+    time: "Mar 09, 2018",
+    author: "Tayo",
+    img: "https://img.netnaija.com/hsi/aHR0cHM6Ly8xLmJwLmJsb2dzcG90LmNvbS8tcVVKV1RIeDJCTkEvV3FIUnBHM3lRSUkvQUFBQUFBQUFKOWMvTmxsbENrVEJWZ1FSUzlTU0tVNEJNaE9MbWdQZUZBOU5nQ0xjQkdBcy9zNjQwL1RvcCUyQjEwLmpwZw==/images/Top%2B10.jpg",
+    body: "Nigeria is arguably endowed with the most beautiful chicks in Africa. Within Nigeria itself, there are awesomely beautiful damsels. But some states can pride to have them in higher concentration than others. Now, Let's hit the market with my well-researched list.",
+    comments: [],
+  },
+  {
+    id: 3015,
+    title:
+      "Residents flee their homes in droves after bandit attacked their communities in Niger state (video)",
+    type: "travel",
+    time: "Feb 08",
+    author: "LuvlyGist",
+    img: "https://static.netnaija.com/i/Aq2NAQ23NzJ.jpg",
+    body: "Residents of over five communities along the Kontagora-Rijau road in Mariga and Rijau local government areas of Niger State have fled their homes following recent attacks carried out by bandits. A video shared online shows men and women with their children in lorries and also on motorcycles as they fled with their belongings. Over the weekend, the terrorists attacked Dusai village, which is a few kilometers away from Kontagora town on Sunday afternoon, February 6, while Kuimo, which is close to Rijau gown was attacked around 4 pm on the same day, allegedly killing over 44 persons including a blind. The fear of more attacks from the bandits has caused the villagers to flee their homes. One of the fleeing residents who gave her name as Fal'ai Danladi said as she was running, she fell several times and injured her fingers, however, she was helped to Rijau by a motorist. Another fleeing resident from Warare community, Aliyu Bello said that he decided to run because he knew that if he were abducted, it won't be easy on him. He said that all of them in the community have deserted the community due to fear of attack adding that while some found their way to Rijau, others ran into the bushes and rocks to hide. Confirming the recent attack, the chairman of Rijau Local Government Council, Bello Bako, said he and his officials are working out ways to ensure that the fleeing residents get somewhere to stay. The state government or the police is yet to comment on this recent development.",
+    comments: [],
+  },
+  {
+    id: 3016,
+    title:
+      "Top 10 States In Nigeria With The Most Beautiful Girls - Do You Agree?",
+    type: "travel",
+    time: "Mar 09, 2018",
+    author: "Tayo",
+    img: "https://img.netnaija.com/hsi/aHR0cHM6Ly8xLmJwLmJsb2dzcG90LmNvbS8tcVVKV1RIeDJCTkEvV3FIUnBHM3lRSUkvQUFBQUFBQUFKOWMvTmxsbENrVEJWZ1FSUzlTU0tVNEJNaE9MbWdQZUZBOU5nQ0xjQkdBcy9zNjQwL1RvcCUyQjEwLmpwZw==/images/Top%2B10.jpg",
+    body: "Nigeria is arguably endowed with the most beautiful chicks in Africa. Within Nigeria itself, there are awesomely beautiful damsels. But some states can pride to have them in higher concentration than others. Now, Let's hit the market with my well-researched list.",
+    comments: [],
+  },
+  {
+    id: 3015,
+    title:
+      "Residents flee their homes in droves after bandit attacked their communities in Niger state (video)",
+    type: "travel",
+    time: "Feb 08",
+    author: "LuvlyGist",
+    img: "https://static.netnaija.com/i/Aq2NAQ23NzJ.jpg",
+    body: "Residents of over five communities along the Kontagora-Rijau road in Mariga and Rijau local government areas of Niger State have fled their homes following recent attacks carried out by bandits. A video shared online shows men and women with their children in lorries and also on motorcycles as they fled with their belongings. Over the weekend, the terrorists attacked Dusai village, which is a few kilometers away from Kontagora town on Sunday afternoon, February 6, while Kuimo, which is close to Rijau gown was attacked around 4 pm on the same day, allegedly killing over 44 persons including a blind. The fear of more attacks from the bandits has caused the villagers to flee their homes. One of the fleeing residents who gave her name as Fal'ai Danladi said as she was running, she fell several times and injured her fingers, however, she was helped to Rijau by a motorist. Another fleeing resident from Warare community, Aliyu Bello said that he decided to run because he knew that if he were abducted, it won't be easy on him. He said that all of them in the community have deserted the community due to fear of attack adding that while some found their way to Rijau, others ran into the bushes and rocks to hide. Confirming the recent attack, the chairman of Rijau Local Government Council, Bello Bako, said he and his officials are working out ways to ensure that the fleeing residents get somewhere to stay. The state government or the police is yet to comment on this recent development.",
+    comments: [],
+  },
+  {
+    id: 3016,
+    title:
+      "Top 10 States In Nigeria With The Most Beautiful Girls - Do You Agree?",
+    type: "travel",
     time: "Mar 09, 2018",
     author: "Tayo",
     img: "https://img.netnaija.com/hsi/aHR0cHM6Ly8xLmJwLmJsb2dzcG90LmNvbS8tcVVKV1RIeDJCTkEvV3FIUnBHM3lRSUkvQUFBQUFBQUFKOWMvTmxsbENrVEJWZ1FSUzlTU0tVNEJNaE9MbWdQZUZBOU5nQ0xjQkdBcy9zNjQwL1RvcCUyQjEwLmpwZw==/images/Top%2B10.jpg",
