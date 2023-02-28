@@ -8,8 +8,6 @@ const DropDown = ({ typ = "Newss" }) => {
 
   const [post, setPost] = useState();
 
-  // const other = BlogList.filter((blog) => blog.type === type);
-
   return (
     <div>
       <section className="text-gray-600 body-font hidden lg:flex ">
