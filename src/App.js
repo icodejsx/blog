@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, createContext } from "react";
 import "./App.css";
 import About from "./components/About";
 import BlogDetails from "./components/BlogDetails";
@@ -12,6 +12,8 @@ import Post from "./components/Post";
 import SignUp from "./components/SignUp";
 
 import World from "./components/movie/World";
+
+export const NewsContext = createContext();
 
 function App() {
   const directory = useLocation();
@@ -33,29 +35,6 @@ function App() {
   }, []);
 
   //
-  useEffect(() => {
-    // select html element
-    const html = document.querySelector("html");
-    //add or remove class dark in html element according to theme in localstorage.
-    if (localStorage.getItem("theme") === "dark") {
-      html.classList.add("dark");
-      setTheme("dark");
-    } else {
-      html.classList.remove("dark");
-      setTheme("light");
-    }
-  }, [theme]);
-
-  // Function  to Handle switch  them
-  const handelThemeSwitch = () => {
-    if (localStorage.getItem("theme") === "dark") {
-      setTheme("dark");
-      localStorage.removeItem("theme", "dark");
-    } else {
-      setTheme("light");
-      localStorage.removeItem("theme", "light");
-    }
-  };
 
   return (
     <div className="bg-slate-100 w-full h-auto">
