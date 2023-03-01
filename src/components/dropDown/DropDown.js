@@ -57,7 +57,7 @@ const DropDown = ({ typ = "Newss" }) => {
                     <div className="flex items-center flex-wrap ">
                       <span className="text-gray-600 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 ">
                         {" "}
-                        {blog.time}
+                        {blog.published_date}
                       </span>
                     </div>
                   </div>
