@@ -2,21 +2,43 @@ import React, { useState, useEffect } from "react";
 import { BlogList } from "../../Data/BlogData";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-const DropDown = ({ typ = "Newss" }) => {
-  const type = typ;
-  console.log(type);
-
+const DropDown = ({ category }) => {
   const [news, setNews] = useState([]);
+  console.log(news);
+
+  // useEffect(() => {
+  //   const fetchNews = async () => {
+  //     try {
+  //       const response = await axios.get(
+  //         "https://newsdata.io/api/1/news?apikey=pub_180765eeaff5bca6c20aef0b559d95647954f"
+  //       );
+  //       setNews(response.data);
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   };
+
+  //   fetchNews();
+
+  //   AOS.init();
+  // }, []);
 
   useEffect(() => {
     const fetchNews = async () => {
       const options = {
         method: "GET",
         url: "https://api.newscatcherapi.com/v2/search",
-        params: { q: "travel", lang: "en", sort_by: "relevancy", page: "1" },
+        params: {
+          q: `{${category}}`,
+          lang: "en",
+          sort_by: "relevancy",
+          page: "1",
+        },
         headers: {
-          "x-api-key": "UBTpdFLawMbbfg9sixNULyNVAkHrFPa7TGKH4aA-cy4",
+          "x-api-key": "_ZlYiesryo1-7V2KRW4GtEQ87-U-m9agyXqTmuZ8JWE",
         },
       };
 
@@ -27,7 +49,12 @@ const DropDown = ({ typ = "Newss" }) => {
         console.error(error);
       }
     };
+
     fetchNews();
+  }, []);
+
+  useEffect(() => {
+    AOS.init();
   }, []);
 
   return (
@@ -35,16 +62,17 @@ const DropDown = ({ typ = "Newss" }) => {
       <section className="text-gray-600 body-font hidden lg:flex ">
         <div className="container px-10 py-5 mx-auto items-center flex justify-center ">
           <div className="flex flex-wrap flex-row -m-4  ">
-            {news.slice(0, 5).map((blog, index) => (
+            {BlogList.slice(0, 5).map((blog, index) => (
               <div
                 className="p-1 md:w-1/5 flex  flex-row  items-center  "
                 key={index}
+                data-aos="fade-up"
               >
                 <div className="h-full  overflow-hidden ">
-                  <Link to={`/posts/${blog._id}`}>
+                  <Link to={`/posts/${blog.id}`}>
                     <img
                       className="lg:h-40 md:h-20 w-full object-cover object-center"
-                      src={blog.media}
+                      src={blog.img}
                       alt="blog"
                     />
                   </Link>
@@ -57,7 +85,7 @@ const DropDown = ({ typ = "Newss" }) => {
                     <div className="flex items-center flex-wrap ">
                       <span className="text-gray-600 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 ">
                         {" "}
-                        {blog.published_date}
+                        {blog.date}
                       </span>
                     </div>
                   </div>

@@ -6,10 +6,6 @@
   display: flex;
 }
 
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
 .dropdown .dropdown-menu {
   display: none;
 }
