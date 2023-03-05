@@ -73,7 +73,7 @@ const DropDown = ({ category }) => {
                     <img
                       className="lg:h-40 md:h-20 w-full object-cover object-center"
                       src={blog.img}
-                      alt="blog"
+                      alt="blo"
                     />
                   </Link>
                   <div className="flex flex-col justify-start items-start text-gray-400 ">
