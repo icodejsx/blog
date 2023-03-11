@@ -1,12 +1,15 @@
+import { gql } from "@apollo/client";
 import React from "react";
 import { Link } from "react-router-dom";
+import client from "../ApolloClient";
 import { BlogList } from "../Data/BlogData";
 
-const Blogs = () => {
+const Blogs = ({ news }) => {
+  console.log(news + "00");
   return (
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto">
-        <d iv className="flex flex-wrap w-full mb-20">
+        <div className="flex flex-wrap w-full mb-20">
           <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
               Todays General Hot News 🔥🔥🔥
@@ -19,7 +22,7 @@ const Blogs = () => {
             haven't heard of them man bun deep jianbing selfies heirloom prism
             food truck ugh squid celiac humblebrag.
           </p>
-        </d>
+        </div>
         <div className="grid md:grid-cols-3 gap-12 ">
           {BlogList.slice(0, 6).map((blogList, index) => (
             <div
@@ -80,3 +83,29 @@ const Blogs = () => {
 };
 
 export default Blogs;
+
+export async function getStaticProps() {
+  const { data: news } = await client.query({
+    query: gql`
+      query {
+        new {
+          id
+          newsContent
+          author
+          category
+          time
+          heading
+          image {
+            url
+          }
+        }
+      }
+    `,
+  });
+  console.log(news);
+  return {
+    props: {
+      news,
+    },
+  };
+}
