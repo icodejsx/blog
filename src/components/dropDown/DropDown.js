@@ -1,44 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { BlogList } from "../../Data/BlogData";
 import { Link } from "react-router-dom";
-import axios from "axios";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const DropDown = () => {
   const [news, setNews] = useState([]);
   // console.log(category);
-
-  useEffect(() => {
-    const fetchNews = async () => {
-      const options = {
-        method: "GET",
-        url: "https://api.newscatcherapi.com/v2/search",
-        params: {
-          q: "bitcoin",
-          lang: "en",
-          sort_by: "relevancy",
-          page: "1",
-        },
-        headers: {
-          "x-api-key": "_ZlYiesryo1-7V2KRW4GtEQ87-U-m9agyXqTmuZ8JWE",
-        },
-      };
-
-      try {
-        const response = await axios.request(options);
-        setNews(response.data.articles);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    fetchNews();
-  }, []);
-
-  useEffect(() => {
-    AOS.init();
-  }, []);
 
   return (
     <div>
