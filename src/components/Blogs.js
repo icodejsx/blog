@@ -5,7 +5,7 @@ import client from "../ApolloClient";
 import { BlogList } from "../Data/BlogData";
 
 const Blogs = ({ news }) => {
-  console.log(news + "00");
+  console.log(news + "fff");
   return (
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto">
@@ -85,7 +85,9 @@ const Blogs = ({ news }) => {
 export default Blogs;
 
 export async function getStaticProps() {
-  const { data: news } = await client.query({
+  const {
+    data: { news },
+  } = await client.query({
     query: gql`
       query {
         new {

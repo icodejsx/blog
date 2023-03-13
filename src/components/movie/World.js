@@ -5,7 +5,7 @@ import DropDown from "../dropDown/DropDown";
 
 const World = () => {
   const [dropDown, setDropDown] = useState();
-  console.log(dropDown);
+  // console.log(dropDown);
 
   useEffect(() => {
     const handleOnMouseHover = (event) => {
@@ -47,7 +47,7 @@ const World = () => {
             <button className="bg-black hover:bg-blue-700 px-4">
               Creative
             </button>
-            <div className="absolute z-10 left-0 mt-2  w-[77.5rem] dropdown-menu mx-[-5.6 rem] ">
+            <div className="absolute z-10 left-0 mt-2  w-[77.5rem] dropdown-menu mx-[-5.6rem] ">
               <div className="bg-black text-white py-2 rounded-md flex flex-row items-center justify-center ">
                 <Link to="" className="block px-4 py-2 ">
                   <DropDown category={DropDown} />

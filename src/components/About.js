@@ -1,4 +1,5 @@
 import React from "react";
+import HygraphAPI from "./HygraphyApi";
 
 const About = () => {
   return (
@@ -7,7 +8,7 @@ const About = () => {
         className="text-rose-600 text-7xl font-semi
     "
       >
-        About Pag
+        <HygraphAPI />
       </h1>
     </div>
   );
