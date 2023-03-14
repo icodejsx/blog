@@ -1,5 +1,6 @@
 import React from "react";
 import { Lightning } from "phosphor-react";
+import { Fade } from "react-awesome-reveal";
 
 const HeroSection = () => {
   return (
@@ -29,7 +30,7 @@ const HeroSection = () => {
         </div>
       </div>
       <div className=" xl:w-1/2 xl:h-1/2 flex gap-1 flex-col">
-        <div className=" relative w-full onhover transition ease-in-out  delay-150 hover:">
+        <div className="group relative w-full onhover hover:transition ease-in-out  delay-150 ho">
           <img
             src="https://media.istockphoto.com/id/507872584/photo/colorful-hot-air-balloons-over-green-rice-field.jpg?s=612x612&w=0&k=20&c=HZfr7MATl9WTTLTcxfqesX8J9ErLPuwkwP-QMQfkbWY="
             alt=""
@@ -44,16 +45,18 @@ const HeroSection = () => {
               <p className="bg-red-500 h-5 w-5 rounded-full items-center justify-center md:flex  hidden ">
                 <Lightning size={15} color="#ffffff" />
               </p>
-              <p className="font-normal md:block hidden">oct 27, 2022</p>
+              <p className="  font-normal md:block hidden">oct 27, 2022</p>
             </div>
             <div className="flex flex-col ">
-              <h1 className=" md:text-xl text-xl mb-4 xl:mb-2">
+              <h1 className=" md:text-xl text-xl mb-4 xl:mb-2 group-hover:transition-all  duration-300">
                 Success is not a good techer, but failure makes you humble
               </h1>
 
               <p class="font-medium text-sm hidden ">
-                stay focused and remember we design the best WordPress News and
-                Magazine Themes. It’s the....
+                <Fade>
+                  stay focused and remember we design the best WordPress News
+                  and Magazine Themes. It’s the....
+                </Fade>
               </p>
             </div>
           </div>
@@ -81,8 +84,10 @@ const HeroSection = () => {
                 </h1>
 
                 <p class="font-medium text-sm hidden hover:flex ">
-                  stay focused and remember we design the best WordPress News
-                  and Magazine Themes. It’s the....
+                  <Fade>
+                    stay focused and remember we design the best WordPress News
+                    and Magazine Themes. It’s the....
+                  </Fade>
                 </p>
               </div>
             </div>
@@ -110,8 +115,10 @@ const HeroSection = () => {
                 </h1>
 
                 <p class="font-medium text-sm hidden hover:flex ">
-                  stay focused and remember we design the best WordPress News
-                  and Magazine Themes. It’s the....
+                  <Fade>
+                    stay focused and remember we design the best WordPress News
+                    and Magazine Themes. It’s the....
+                  </Fade>
                 </p>
               </div>
             </div>

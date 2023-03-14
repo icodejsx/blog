@@ -9,7 +9,7 @@ const Home = () => {
       <section className="text-gray-600 body-font  border-slate-900 md:mt-8  mt-4 flex flex-col gap-10">
         <HeroSection />
 
-        <div className="flex  lg:flex-row flex-col  container mx-auto md:px-5  p-3">
+        <div className="flex  lg:flex-row flex-col  container mx-auto md:px-5  p-3 gap-10">
           <div className="flex flex-col lg:w-2/3 w-full ">
             <Trending />
           </div>
