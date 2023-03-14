@@ -15,7 +15,7 @@ import {
 const Socials = () => {
   return (
     <div className="flex flex-col items-center justify-center content-around mx-auto w-full px-4 gap-3">
-      <div className="flex flex-row justify-between w-full  border-b-2 border-black  ">
+      <div className="flex flex-row justify-between w-full  border-b-2 border-black pb-2  ">
         <p className="font-bold">Follow Us </p>
         <ThumbsUp size={28} color="#0f0f0f" />
       </div>
