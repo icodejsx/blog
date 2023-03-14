@@ -13,8 +13,8 @@ import SignUp from "./components/SignUp";
 
 import World from "./components/movie/World";
 import News from "./components/News";
-import { ApolloProvider } from "@apollo/client";
-import client from "./client";
+
+import DropDown from "./components/dropDown/DropDown";
 
 export const NewsContext = createContext();
 
@@ -36,18 +36,16 @@ function App() {
     <div className="bg-slate-100 w-full h-auto">
       <NavBar />
 
-      <ApolloProvider client={client}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/posts" element={<Post />} />
-          <Route path="/posts/:id" element={<BlogDetails />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/host" element={<Host />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/news" element={<News />} />
-        </Routes>
-      </ApolloProvider>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/posts" element={<Post />} />
+        <Route path="/posts/:id" element={<BlogDetails />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/host" element={<Host />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/news" element={<News />} />
+      </Routes>
 
       <World />
     </div>

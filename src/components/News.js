@@ -1,20 +1,6 @@
-import { useQuery, gql } from "@apollo/client";
+import { useQuery } from "@apollo/client";
+import { GET_NEWS } from "../newsQueries";
 
-const GET_NEWS = gql`
-  query {
-    blog {
-      id
-      author
-      category
-      heading
-      time
-      image {
-        url
-      }
-      newsContent
-    }
-  }
-`;
 const News = () => {
   const { loading, error, data } = useQuery(GET_NEWS, {
     onSuccess: (data) => {
