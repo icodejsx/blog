@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import { useEffect, useState, createContext } from "react";
+import { useEffect, createContext } from "react";
 import "./App.css";
 import About from "./components/About";
 import BlogDetails from "./components/BlogDetails";
@@ -11,10 +11,8 @@ import NavBar from "./components/NavBar";
 import Post from "./components/Post";
 import SignUp from "./components/SignUp";
 
-import World from "./components/movie/World";
 import News from "./components/News";
-
-import DropDown from "./components/dropDown/DropDown";
+import World from "./components/movie/World";
 
 export const NewsContext = createContext();
 
@@ -28,7 +26,6 @@ function App() {
   }, [directory.pathname]);
 
   // toggle or Light and dark mode
-  const [theme, setTheme] = useState("light");
 
   //
 
