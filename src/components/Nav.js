@@ -16,7 +16,7 @@ function Nav() {
       <nav
         className={`lg:ml-auto lg:flex lg:flex-row lg:flex-wrap lg:items-center flex flex-col lg:justify-between text-white bg-black lg:p-1 lg:w-full decoration-20 top-0 pl-8 ${
           navOpen
-            ? "fixed left-0 w-full text-white h-screen pt-4 overflow-x-auto overflow-hidden transition-all duration-100 ease-out"
+            ? "fixed left-0 w-full text-white h-screen pt-4 overflow-x-auto overflow-hidden transition-all duration-100 ease-out relative"
             : "hidden"
         }`}
       >

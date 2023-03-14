@@ -11,5 +11,15 @@
 }
 
 .dropdown .show-on-load {
-  display: block;
+  display: flex;
+}
+@media only screen and (min-width: 1200px) {
+  .onhover:hover .font-medium {
+    display: block;
+  }
+}
+
+div.onhover:hover p {
+  opacity: 1;
+  transition: opacity 3s ease;
 }
