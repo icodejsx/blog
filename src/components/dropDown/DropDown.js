@@ -5,7 +5,7 @@ import { GET_NEWS } from "../../newsQueries";
 const DropDown = ({ cat }) => {
   const { loading, error, data } = useQuery(GET_NEWS, {
     onSuccess: (data) => {
-      console.log(data);
+      // console.log(data);
     },
   });
   // const data = BlogList.filter((blog) => blog.id === idNum);
@@ -19,7 +19,7 @@ const DropDown = ({ cat }) => {
   }
 
   const filteredData = data.blog.filter((blog) => blog.category === cat);
-  console.log(filteredData);
+  // console.log(filteredData)
 
   return (
     <div>
