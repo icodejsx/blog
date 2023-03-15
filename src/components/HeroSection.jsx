@@ -8,7 +8,7 @@ const HeroSection = () => {
       <div className=" xl:w-1/2  w-full ">
         <div className="relative h-full ">
           <img
-            src="https://jannah.tielabs.com/demo/wp-content/uploads/sites/8/2016/10/demo-image-1.jpg"
+            src="https://media.istockphoto.com/id/1366052585/photo/shot-of-a-group-of-friends-hanging-out-before-working-out-together.jpg?s=612x612&w=0&k=20&c=rj7LgjUuXde0eLWikS1rvDnsKDdBotgsy9eM5HDzko0="
             alt=""
             className=" xl:w-[40rem] object-cover w-full md:h-96 xl:h-full bg-opacity-50"
           />
