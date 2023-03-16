@@ -10,8 +10,8 @@ import {
   UserCircle,
 } from "phosphor-react";
 
-const Trending = () => {
-  const [content, updateContent] = useState("General");
+const Sport = () => {
+  const [content, updateContent] = useState("sports");
 
   console.log(content);
 
@@ -55,83 +55,60 @@ const Trending = () => {
     updateContent("General");
   }
 
-  const trendingNews = data.blog.filter((blog) => blog.category === content);
-  console.log(trendingNews);
+  const SportNews = data.blog.filter((blog) => blog.category === content);
+  console.log(SportNews);
 
   return (
-    <div className="container mx-auto flex flex-col   items-center gap-5 w-full">
+    <div className="container mx-auto flex flex-col   items-center gap-5 w-full bg-black text-white p-9 ">
       <div className="flex flex-row justify-between  w-full border-b-2 border-black pb-2 ">
         <div>
-          <p className="font-bold text-xl text-red-500">TrendingNews</p>
+          <p className="font-bold text-xl text-green-500">SportNews</p>
         </div>
         <div className="flex flex-row items-center  gap-4 ">
           <div className="flex flex-row gap-3  ">
-            <Link className="text-red-500 text-xs p-1 rounded-sm trend">
+            <Link className="text-green-500 text-xs p-1 rounded-sm trend">
               All
             </Link>
             <div className="md:flex hidden flex-row gap-3 ">
               <Link
                 to=""
-                className="hover:bg-red-500 hover:text-white text-xs p-1 rounded-sm trend "
+                className="hover:bg-green-500 hover:text-white text-xs p-1 rounded-sm trend"
               >
-                sports
+                Football
               </Link>
+
               <Link
                 to=""
-                className="hover:bg-red-500 hover:text-white text-xs p-1 rounded-sm trend"
-              >
-                Life Style
-              </Link>
-              <Link
-                to=""
-                className="hover:bg-red-500 hover:text-white text-xs p-1 rounded-sm trend"
+                className="hover:bg-green-500 hover:text-white text-xs p-1 rounded-sm trend"
               >
                 Racing
               </Link>
               <Link
                 to=""
-                className="hover:bg-red-500 hover:text-white text-xs p-1 rounded-sm trend"
+                className="hover:bg-green-500 hover:text-white text-xs p-1 rounded-sm trend"
               >
                 Sport
               </Link>
               <Link
                 to=""
-                className="hover:bg-red-500 hover:text-white text-xs p-1 rounded-sm trend"
+                className="hover:bg-green-500 hover:text-white text-xs p-1 rounded-sm trend"
               >
                 Swimming
               </Link>
-              <Link
-                to=""
-                className="hover:bg-red-500 hover:text-white text-xs p-1 rounded-sm trend"
-              >
-                Technology
-              </Link>
-              <Link
-                to=""
-                className="hover:bg-red-500 hover:text-white text-xs p-1 rounded-sm trend"
-              >
-                Travel
-              </Link>
-              <Link
-                to=""
-                className="hover:bg-red-500 hover:text-white text-xs p-1 rounded-sm trend"
-              >
-                World
-              </Link>
             </div>
             <div className="flex gap-3 items-center">
-              <div className=" border border-gray-400 hover:bg-red-500 ">
+              <div className=" border border-gray-400 hover:bg-green-500 ">
                 <ArrowLeft size={15} />
               </div>
-              <div className=" border border-gray-400 hover:bg-red-500 ">
+              <div className=" border border-gray-400 hover:bg-green-500 ">
                 <ArrowRight size={15} />
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="flex md:flex-row  flex-col justify-between gap-7 ">
-        {trendingNews.slice(0, 1).map((blog, index) => {
+      <div className="flex md:flex-col  flex-col justify-between gap-5 ">
+        {SportNews.slice(0, 1).map((blog, index) => {
           const date = new Date(blog.time);
           const formattedDate = date.toLocaleString("en-US", {
             day: "numeric",
@@ -140,25 +117,20 @@ const Trending = () => {
           });
 
           return (
-            <div className="relative md:w-[30rem]  bg-blue-600">
-              <img
-                src={blog.image.url}
-                alt=""
-                className=" md:h-[30rem] object-cover "
-                key={index}
-              />
-              <div class="absolute top-0 left-0 w-full h-full bg-black opacity-30"></div>
+            <div className="  bg-blue-600 flex flex-row    ">
+              <div className="relative md:w-[30rem]">
+                <img
+                  src={blog.image.url}
+                  alt=""
+                  className=" md:h-[13rem] object-cover "
+                  key={index}
+                />
 
-              <p className="bg-red-500 h-9 w-9 rounded-full items-center justify-center flex absolute -top-2 left-5  ">
-                <Lightning size={25} color="#ffffff" />
-              </p>
-              <div className="absolute bottom-32  left-5  bg-purple-500 p-1 px-2 rounded-md">
-                <p className="text-white text-sm ">Creative</p>
+                <div className="absolute bottom-4  right-9  bg-purple-500 p-1 px-2 rounded-md">
+                  <p className="text-white text-sm ">Creative</p>
+                </div>
               </div>
-              <div className="absolute bottom-0 md:left-0 left-5  p-1 flex flex-col gap-3 text-white md:px-4 ">
-                <h1 className=" md:text-2xl text-xl mb-4 xl:mb-0 font-bold">
-                  {blog.heading}
-                </h1>
+              <div className="  p-1 flex flex-col gap-3 text-white md:px-4 ">
                 <div className="flex gap-2 items-center text-sm">
                   <div className="flex gap-1 items-center">
                     <UserCircle size={16} color="#d9d3d3" />
@@ -169,13 +141,16 @@ const Trending = () => {
                     <p>{formattedDate}</p>
                   </div>
                 </div>
+                <h1 className=" md:text-xl text-xl mb-4 xl:mb-0 font-bold">
+                  {blog.heading}
+                </h1>
               </div>
             </div>
           );
         })}
 
         <div className=" flex flex-col gap-5 ">
-          {trendingNews.slice(1, 5).map((blog, index) => {
+          {SportNews.slice(1, 2).map((blog, index) => {
             const date = new Date(blog.time);
             const formattedDate = date.toLocaleString("en-US", {
               day: "numeric",
@@ -218,4 +193,4 @@ const Trending = () => {
   );
 };
 
-export default Trending;
+export default Sport;

@@ -1,6 +1,7 @@
 import React from "react";
 import HeroSection from "./HeroSection";
 import Socials from "./Socials";
+import Sport from "./Sport";
 import Trending from "./Trending";
 
 const Home = () => {
@@ -10,8 +11,9 @@ const Home = () => {
         <HeroSection />
 
         <div className="flex  lg:flex-row flex-col  container mx-auto md:px-5  p-3 gap-10">
-          <div className="flex flex-col lg:w-2/3 w-full  ">
+          <div className="flex flex-col lg:w-2/3 w-full gap-14  ">
             <Trending />
+            <Sport />
           </div>
           <div className="flex flex-col lg:w-1/3  w-full ">
             <Socials />

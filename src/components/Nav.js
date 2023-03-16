@@ -3,6 +3,7 @@ import { Handbag, Moon, X, MagnifyingGlass, List } from "phosphor-react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import myGif from "../assets/cloud.gif";
 import World from "./movie/World";
+import ReHead from "./ReHead";
 
 function Nav() {
   const [navOpen, setNavOpen] = useState(false);
@@ -52,7 +53,7 @@ function Nav() {
           </Link>
           {/* <!-- Dropdown menu --> */}
           <div id="dropdownHover" className="z-10 hidden w-full   ">
-            <World />
+            <ReHead />
           </div>
 
           <Link to="/host" className="mr-5 hover:text-gray-900">

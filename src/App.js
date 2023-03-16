@@ -13,6 +13,7 @@ import SignUp from "./components/SignUp";
 
 import News from "./components/News";
 import World from "./components/movie/World";
+import ReHead from "./components/ReHead";
 
 export const NewsContext = createContext();
 
@@ -44,7 +45,7 @@ function App() {
         <Route path="/news" element={<News />} />
       </Routes>
 
-      <World />
+      <ReHead />
     </div>
   );
 }
