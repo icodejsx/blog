@@ -2,9 +2,15 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { GET_NEWS } from "../newsQueries";
-import { ArrowLeft, ArrowRight, Clock, UserCircle } from "phosphor-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  Clock,
+  UserCircle,
+  Lightning,
+} from "phosphor-react";
 
-const Sport = () => {
+const LifeStyle = () => {
   const [content, updateContent] = useState("sports");
 
   console.log(content);
@@ -53,48 +59,18 @@ const Sport = () => {
   console.log(SportNews);
 
   return (
-    <div className="container mx-auto flex flex-col   items-center gap-5 w-full bg-gray-800 text-white p-9 ">
-      <div className="flex flex-row justify-between  w-full border-b-2 border-gray-500 pb-2 ">
+    <div className=" flex flex-col   items-center gap-5 md:w-1/2  ">
+      <div className="flex flex-row justify-between  w-full border-b-2 border-gray-500 pb-2  ">
         <div>
-          <p className="font-bold text-xl text-green-500">SportNews</p>
+          <p className="font-bold text-xl text-yellow-400">Life Style</p>
         </div>
         <div className="flex flex-row items-center  gap-4 ">
           <div className="flex flex-row gap-3  ">
-            <Link className="text-green-500 text-xs p-1 rounded-sm trend">
-              All
-            </Link>
-            <div className="md:flex hidden flex-row gap-3 ">
-              <Link
-                to=""
-                className="hover:bg-green-500 hover:text-white text-xs p-1 rounded-sm trend"
-              >
-                Football
-              </Link>
-
-              <Link
-                to=""
-                className="hover:bg-green-500 hover:text-white text-xs p-1 rounded-sm trend"
-              >
-                Racing
-              </Link>
-              <Link
-                to=""
-                className="hover:bg-green-500 hover:text-white text-xs p-1 rounded-sm trend"
-              >
-                Sport
-              </Link>
-              <Link
-                to=""
-                className="hover:bg-green-500 hover:text-white text-xs p-1 rounded-sm trend"
-              >
-                Swimming
-              </Link>
-            </div>
             <div className="flex gap-3 items-center">
-              <div className=" border border-gray-400 hover:bg-green-500 ">
+              <div className=" border border-gray-400 hover:bg-yellow-400 ">
                 <ArrowLeft size={15} />
               </div>
-              <div className=" border border-gray-400 hover:bg-green-500 ">
+              <div className=" border border-gray-400 hover:bg-yellow-400 ">
                 <ArrowRight size={15} />
               </div>
             </div>
@@ -111,42 +87,44 @@ const Sport = () => {
           });
 
           return (
-            <div className="flex md:flex-row flex-col  gap-4   ">
-              <div className="relative md:w-[25rem] ">
+            <div className="flex  flex-col  gap-4   ">
+              <div className="relative md:w-[21rem] xl:w-[25rem] ">
                 <img
                   src={blog.image.url}
                   alt=""
                   className=" md:h-[13rem] md:w-[25rem] object-cover "
                   key={index}
                 />
-
+                <p className="bg-red-500 h-9 w-9 rounded-full items-center justify-center flex absolute -top-2 left-5  ">
+                  <Lightning size={25} color="#ffffff" />
+                </p>
                 <div className="absolute bottom-4  right-5  bg-purple-500 p-1 px-2 rounded-md">
-                  <p className="text-white text-sm ">Creative</p>
+                  <p className="text-white text-sm ">Travel</p>
                 </div>
               </div>
-              <div className=" flex flex-col gap-3 text-white md:w-3/5  ">
+              <div className=" flex flex-col gap-3 e  ">
                 <div className="flex gap-2 items-center text-xs">
                   <div className="flex gap-1 items-center">
-                    <UserCircle size={16} color="#d9d3d3" />
+                    <UserCircle size={16} color="#1d1d1d" />
                     <p>{blog.author} </p>
                   </div>
                   <div className="flex gap-1 items-center  ">
-                    <Clock size={16} color="#d9d3d3" />
+                    <Clock size={16} color="#1d1d1d" />
                     <p>{formattedDate}</p>
                   </div>
                 </div>
                 <div className=" ">
-                  <h1 className=" md:text-xl text-xl mb-4 xl:mb-0 font-bold hover:text-green-400">
+                  <h1 className=" md:text-xl text-xl mb-4 xl:mb-0 font-bold hover:text-yellow-400">
                     {blog.heading}
                   </h1>
                   <p className="text-sm mt-3 ">
-                    Stay focused and remember we design the best WordPress News
-                    and Magazine Themes. It’s the ones closest to you that want
-                    to…
+                    {blog.newsContent.length >= 140
+                      ? blog.newsContent.slice(0, 140) + "..."
+                      : blog.newsContent}
                   </p>
                   <Link
                     to={`/posts/${blog.id}`}
-                    className="bg-green-500 px-6 py-2 mt-3 inline-block rounded text-white"
+                    className="bg-yellow-400 px-6 py-2 mt-3 inline-block rounded text-white"
                   >
                     Read More
                   </Link>
@@ -156,8 +134,8 @@ const Sport = () => {
           );
         })}
 
-        <div className=" flex flex-row justify-between flex-wrap gap-7  xl:gap-6  md:gap-3">
-          {SportNews.slice(1, 5).map((blog, index) => {
+        <div className=" flex flex-col justify-between flex-wrap gap-7  xl:gap-6  md:gap-4">
+          {SportNews.slice(1, 3).map((blog, index) => {
             const date = new Date(blog.time);
             const formattedDate = date.toLocaleString("en-US", {
               day: "numeric",
@@ -166,7 +144,7 @@ const Sport = () => {
             });
 
             return (
-              <div className="flex flex-row md:gap-3 gap-2  w-80 ">
+              <div className="flex flex-row md:gap-3 gap-2   ">
                 <div className="  object-cover  object-center ">
                   <Link to={`/posts/${blog.id}`}>
                     <div className="square-image-container">
@@ -181,11 +159,14 @@ const Sport = () => {
                 <div className="flex flex-col justify-start text-sm gap-2">
                   <div className="flex items-center gap-1">
                     <div className="flex items-center gap-2">
-                      <Clock size={14} color="#ffffff" />
+                      <p className="bg-red-500 h-4 w-4 rounded-full items-center justify-center flex   ">
+                        <Lightning size={12} color="#ffffff" />
+                      </p>
+                      <Clock size={14} color="#1d1d1d" />
                     </div>
                     <p>{formattedDate}</p>
                   </div>
-                  <div className="font-bold hover:text-green-500">
+                  <div className="font-bold hover:text-yellow-400">
                     <p>{blog.heading}</p>
                   </div>
                 </div>
@@ -198,4 +179,4 @@ const Sport = () => {
   );
 };
 
-export default Sport;
+export default LifeStyle;

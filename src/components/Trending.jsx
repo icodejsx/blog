@@ -152,7 +152,7 @@ const Trending = () => {
               <p className="bg-red-500 h-9 w-9 rounded-full items-center justify-center flex absolute -top-2 left-5  ">
                 <Lightning size={25} color="#ffffff" />
               </p>
-              <div className="absolute bottom-32  left-5  bg-purple-500 p-1 px-2 rounded-md">
+              <div className="absolute xl:bottom-32  bottom-36 left-5  bg-purple-500 p-1 px-2 rounded-md">
                 <p className="text-white text-sm ">Creative</p>
               </div>
               <div className="absolute bottom-0 md:left-0 left-5  p-1 flex flex-col gap-3 text-white md:px-4 ">
@@ -175,7 +175,7 @@ const Trending = () => {
         })}
 
         <div className=" flex flex-col gap-5 ">
-          {trendingNews.slice(1, 5).map((blog, index) => {
+          {trendingNews.slice(0, 5).map((blog, index) => {
             const date = new Date(blog.time);
             const formattedDate = date.toLocaleString("en-US", {
               day: "numeric",
@@ -185,14 +185,16 @@ const Trending = () => {
 
             return (
               <div className="flex flex-row md:gap-4 gap-2 ">
-                <div className=" w-40 object-cover bg-red-400 object-center ">
+                <div className=" object-center ">
                   <Link to={`/posts/${blog.id}`}>
-                    <img
-                      className="h-20   object-cover object-center"
-                      src={blog.image.url}
-                      alt="blog"
-                      key={index}
-                    />
+                    <div className="square-image-container2">
+                      <img
+                        className="square-image2 "
+                        src={blog.image.url}
+                        alt="blog"
+                        key={index}
+                      />
+                    </div>
                   </Link>
                 </div>
                 <div className="flex flex-col justify-start text-sm gap-2">

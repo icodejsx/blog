@@ -4,7 +4,7 @@ import { useQuery } from "@apollo/client";
 import { GET_NEWS } from "../newsQueries";
 import { ArrowLeft, ArrowRight, Clock, UserCircle } from "phosphor-react";
 
-const Sport = () => {
+const Text = () => {
   const [content, updateContent] = useState("sports");
 
   console.log(content);
@@ -53,43 +53,13 @@ const Sport = () => {
   console.log(SportNews);
 
   return (
-    <div className="container mx-auto flex flex-col   items-center gap-5 w-full bg-gray-800 text-white p-9 ">
-      <div className="flex flex-row justify-between  w-full border-b-2 border-gray-500 pb-2 ">
+    <div className=" flex flex-col   items-center gap-5 w-1/2  ">
+      <div className="flex flex-row justify-between  w-full border-b-2 border-gray-500 pb-2  ">
         <div>
           <p className="font-bold text-xl text-green-500">SportNews</p>
         </div>
         <div className="flex flex-row items-center  gap-4 ">
           <div className="flex flex-row gap-3  ">
-            <Link className="text-green-500 text-xs p-1 rounded-sm trend">
-              All
-            </Link>
-            <div className="md:flex hidden flex-row gap-3 ">
-              <Link
-                to=""
-                className="hover:bg-green-500 hover:text-white text-xs p-1 rounded-sm trend"
-              >
-                Football
-              </Link>
-
-              <Link
-                to=""
-                className="hover:bg-green-500 hover:text-white text-xs p-1 rounded-sm trend"
-              >
-                Racing
-              </Link>
-              <Link
-                to=""
-                className="hover:bg-green-500 hover:text-white text-xs p-1 rounded-sm trend"
-              >
-                Sport
-              </Link>
-              <Link
-                to=""
-                className="hover:bg-green-500 hover:text-white text-xs p-1 rounded-sm trend"
-              >
-                Swimming
-              </Link>
-            </div>
             <div className="flex gap-3 items-center">
               <div className=" border border-gray-400 hover:bg-green-500 ">
                 <ArrowLeft size={15} />
@@ -111,8 +81,8 @@ const Sport = () => {
           });
 
           return (
-            <div className="flex md:flex-row flex-col  gap-4   ">
-              <div className="relative md:w-[25rem] ">
+            <div className="flex  flex-col  gap-4   ">
+              <div className="relative md:w-[21rem] xl:w-[25rem] ">
                 <img
                   src={blog.image.url}
                   alt=""
@@ -124,14 +94,14 @@ const Sport = () => {
                   <p className="text-white text-sm ">Creative</p>
                 </div>
               </div>
-              <div className=" flex flex-col gap-3 text-white md:w-3/5  ">
+              <div className=" flex flex-col gap-3 e  ">
                 <div className="flex gap-2 items-center text-xs">
                   <div className="flex gap-1 items-center">
-                    <UserCircle size={16} color="#d9d3d3" />
+                    <UserCircle size={16} color="#1d1d1d" />
                     <p>{blog.author} </p>
                   </div>
                   <div className="flex gap-1 items-center  ">
-                    <Clock size={16} color="#d9d3d3" />
+                    <Clock size={16} color="#1d1d1d" />
                     <p>{formattedDate}</p>
                   </div>
                 </div>
@@ -156,8 +126,8 @@ const Sport = () => {
           );
         })}
 
-        <div className=" flex flex-row justify-between flex-wrap gap-7  xl:gap-6  md:gap-3">
-          {SportNews.slice(1, 5).map((blog, index) => {
+        <div className=" flex flex-col justify-between flex-wrap gap-7  xl:gap-6  md:gap-4">
+          {SportNews.slice(1, 3).map((blog, index) => {
             const date = new Date(blog.time);
             const formattedDate = date.toLocaleString("en-US", {
               day: "numeric",
@@ -166,7 +136,7 @@ const Sport = () => {
             });
 
             return (
-              <div className="flex flex-row md:gap-3 gap-2  w-80 ">
+              <div className="flex flex-row md:gap-3 gap-2   ">
                 <div className="  object-cover  object-center ">
                   <Link to={`/posts/${blog.id}`}>
                     <div className="square-image-container">
@@ -198,4 +168,4 @@ const Sport = () => {
   );
 };
 
-export default Sport;
+export default Text;

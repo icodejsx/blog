@@ -23,7 +23,7 @@ const DropDown = ({ cat }) => {
 
   return (
     <div>
-      <section className="text-gray-600 body-font hidden lg:flex ">
+      <section className="text-gray-600 body-font  flex ">
         <div className="container px-10 py-5 mx-auto items-center flex justify-center ">
           <div className="flex flex-wrap flex-row -m-4">
             {filteredData.slice(0, 5).map((blog, index) => {

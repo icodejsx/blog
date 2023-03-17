@@ -2,21 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-.dropdown:hover .dropdown-menu {
-  display: flex;
-}
-
-.dropdown .dropdown-menu {
-  display: none;
-}
-
-.dropdown .show-on-load {
-  display: flex;
-}
 @media only screen and (min-width: 1200px) {
   .onhover:hover .font-medium {
     display: block;
   }
+}
+
+/* this is for sport small images  */
+.square-image-container {
+  width: 120px;
+  height: 70px;
+  overflow: hidden; /* hide any overflow from the image */
+}
+
+.square-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* this for trending small images */
+.square-image-container2 {
+  width: 110px;
+  height: 80px;
+  overflow: hidden; /* hide any overflow from the image */
+}
+
+.square-image2 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 div.onhover:hover p {
