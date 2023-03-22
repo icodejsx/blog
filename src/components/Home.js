@@ -39,6 +39,14 @@ const Home = () => {
             <MostViewed />
           </div>
         </div>
+        <div className="flex  lg:flex-row flex-col  container mx-auto md:px-5  p-3 gap-10">
+          <div className="flex flex-col lg:w-2/3 w-full gap-14  ">
+            <Tech />
+          </div>
+          <div className="flex flex-col lg:w-1/3  w-full ">
+            <MostViewed />
+          </div>
+        </div>
       </section>
     </div>
   );
