@@ -53,15 +53,15 @@ const WhatsNew = () => {
   console.log(SportNews);
 
   return (
-    <div className="container mx-auto flex flex-col   items-center gap-5 w-full bg-green-100 text-black p-9 ">
+    <div className="container mx-auto flex flex-col   items-center gap-5 w-full  text-black p-9 ">
       <div className="flex flex-row justify-between  w-full border-b-2 border-gray-500 pb-2 ">
         <div>
           <p className="font-bold text-xl text-green-500">Whats New</p>
         </div>
         <div className="flex flex-row items-center  gap-4 "></div>
       </div>
-      <div className="flex md:flex-row flex-col  flex-wrap justify-between gap-3 ">
-        {SportNews.slice(0, 5).map((blog, index) => {
+      <div className="flex md:flex-row flex-col  flex-wrap justify-between ">
+        {SportNews.slice(0, 4).map((blog, index) => {
           const date = new Date(blog.time);
           const formattedDate = date.toLocaleString("en-US", {
             day: "numeric",
@@ -83,6 +83,7 @@ const WhatsNew = () => {
                   <p className="text-white text-sm ">Travel</p>
                 </div>
               </div>
+
               <div className=" flex flex-col gap-1 text-black ">
                 <div className="flex gap-2 items-center text-xs">
                   <div className="flex gap-1 items-center">
@@ -96,19 +97,13 @@ const WhatsNew = () => {
                 </div>
                 <div className=" ">
                   <h1 className=" md:text-xl text-xl mb-2 xl:mb-0 font-bold hover:text-green-400">
-                    {blog.heading}
+                    <Link to="post">{blog.heading}</Link>
                   </h1>
                   <p className="text-sm mt-1 ">
                     {blog.newsContent.length >= 60
                       ? blog.newsContent.slice(0, 60) + "..."
                       : blog.newsContent}
                   </p>
-                  <Link
-                    to={`/posts/${blog.id}`}
-                    className="bg-green-500 px-6 py-2 mt-3 inline-block rounded text-white"
-                  >
-                    Read More
-                  </Link>
                 </div>
               </div>
             </div>
