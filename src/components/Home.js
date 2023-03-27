@@ -9,6 +9,7 @@ import Sport from "./Sport";
 import SportSec from "./SportSec";
 import Tech from "./Tech";
 import Trending from "./Trending";
+import WhatsNew from "./WhatsNew";
 
 const Home = () => {
   return (
@@ -39,9 +40,10 @@ const Home = () => {
             <MostViewed />
           </div>
         </div>
+
         <div className="flex  lg:flex-row flex-col  container mx-auto md:px-5  p-3 gap-10">
           <div className="flex flex-col lg:w-2/3 w-full gap-14  ">
-            <Tech />
+            <WhatsNew />
           </div>
           <div className="flex flex-col lg:w-1/3  w-full ">
             <MostViewed />

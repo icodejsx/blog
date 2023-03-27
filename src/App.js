@@ -31,7 +31,6 @@ function App() {
   return (
     <div className="bg-slate-100 w-full h-auto">
       <NavBar />
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -42,7 +41,6 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/news" element={<News />} />
       </Routes>
-      {/* <Text /> */}
     </div>
   );
 }

@@ -56,47 +56,12 @@ const WhatsNew = () => {
     <div className="container mx-auto flex flex-col   items-center gap-5 w-full bg-green-100 text-black p-9 ">
       <div className="flex flex-row justify-between  w-full border-b-2 border-gray-500 pb-2 ">
         <div>
-          <p className="font-bold text-xl text-green-500">WhatsNewnology</p>
+          <p className="font-bold text-xl text-green-500">Whats New</p>
         </div>
-        <div className="flex flex-row items-center  gap-4 ">
-          <div className="flex flex-row gap-3  ">
-            <Link className="text-green-500 text-xs p-1 rounded-sm trend">
-              All
-            </Link>
-            <div className="md:flex hidden flex-row gap-3 ">
-              <Link
-                to=""
-                className="hover:bg-green-500 hover:text-white text-xs p-1 rounded-sm trend"
-              >
-                Creative
-              </Link>
-
-              <Link
-                to=""
-                className="hover:bg-green-500 hover:text-white text-xs p-1 rounded-sm trend"
-              >
-                WhatsNewnology
-              </Link>
-              <Link
-                to=""
-                className="hover:bg-green-500 hover:text-white text-xs p-1 rounded-sm trend"
-              >
-                World
-              </Link>
-            </div>
-            <div className="flex gap-3 items-center">
-              <div className=" border border-gray-400 hover:bg-green-500 ">
-                <ArrowLeft size={15} />
-              </div>
-              <div className=" border border-gray-400 hover:bg-green-500 ">
-                <ArrowRight size={15} />
-              </div>
-            </div>
-          </div>
-        </div>
+        <div className="flex flex-row items-center  gap-4 "></div>
       </div>
-      <div className="flex md:flex-row  flex-col justify-between gap-3 ">
-        {SportNews.slice(0, 1).map((blog, index) => {
+      <div className="flex md:flex-row flex-col  flex-wrap justify-between gap-3 ">
+        {SportNews.slice(0, 5).map((blog, index) => {
           const date = new Date(blog.time);
           const formattedDate = date.toLocaleString("en-US", {
             day: "numeric",
@@ -105,12 +70,12 @@ const WhatsNew = () => {
           });
 
           return (
-            <div className="flex md:flex-col flex-col  gap-4   ">
-              <div className="relative md:w-[25rem] ">
+            <div className="flex md:flex-col flex-col w-[20rem]">
+              <div className="relative md:w-[20rem] ">
                 <img
                   src={blog.image.url}
                   alt=""
-                  className=" md:h-[13rem] md:w-[25rem] object-cover "
+                  className=" md:h-[13rem] md:w-[20rem] object-cover "
                   key={index}
                 />
 
@@ -118,7 +83,7 @@ const WhatsNew = () => {
                   <p className="text-white text-sm ">Travel</p>
                 </div>
               </div>
-              <div className=" flex flex-col gap-3 text-black ">
+              <div className=" flex flex-col gap-1 text-black ">
                 <div className="flex gap-2 items-center text-xs">
                   <div className="flex gap-1 items-center">
                     <UserCircle size={16} color="#1d1d1d" />
@@ -130,13 +95,13 @@ const WhatsNew = () => {
                   </div>
                 </div>
                 <div className=" ">
-                  <h1 className=" md:text-xl text-xl mb-4 xl:mb-0 font-bold hover:text-green-400">
+                  <h1 className=" md:text-xl text-xl mb-2 xl:mb-0 font-bold hover:text-green-400">
                     {blog.heading}
                   </h1>
-                  <p className="text-sm mt-3 ">
-                    Stay focused and remember we design the best WordPress News
-                    and Magazine Themes. It’s the ones closest to you that want
-                    to…
+                  <p className="text-sm mt-1 ">
+                    {blog.newsContent.length >= 60
+                      ? blog.newsContent.slice(0, 60) + "..."
+                      : blog.newsContent}
                   </p>
                   <Link
                     to={`/posts/${blog.id}`}
@@ -149,44 +114,6 @@ const WhatsNew = () => {
             </div>
           );
         })}
-
-        <div className=" flex flex-col justify-between flex-wrap gap-7  xl:gap-6  md:gap-3">
-          {SportNews.slice(1, 5).map((blog, index) => {
-            const date = new Date(blog.time);
-            const formattedDate = date.toLocaleString("en-US", {
-              day: "numeric",
-              month: "long",
-              year: "numeric",
-            });
-
-            return (
-              <div className="flex flex-row md:gap-3 gap-2  w-80 ">
-                <div className="  object-cover  object-center ">
-                  <Link to={`/posts/${blog.id}`}>
-                    <div className="square-image-container">
-                      <img
-                        className="square-image"
-                        src={blog.image.url}
-                        alt="blog"
-                      />
-                    </div>
-                  </Link>
-                </div>
-                <div className="flex flex-col justify-start text-sm gap-2">
-                  <div className="flex items-center gap-1">
-                    <div className="flex items-center gap-2">
-                      <Clock size={14} color="#ffffff" />
-                    </div>
-                    <p>{formattedDate}</p>
-                  </div>
-                  <div className="font-bold hover:text-green-500">
-                    <p>{blog.heading}</p>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
       </div>
     </div>
   );

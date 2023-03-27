@@ -175,7 +175,7 @@ const Tech = () => {
                 <div className="flex flex-col justify-start text-sm gap-2">
                   <div className="flex items-center gap-1">
                     <div className="flex items-center gap-2">
-                      <Clock size={14} color="#ffffff" />
+                      <Clock size={14} color="#000000" />
                     </div>
                     <p>{formattedDate}</p>
                   </div>
