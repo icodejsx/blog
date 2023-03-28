@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { TwitterLogo } from "phosphor-react";
 const Footer = () => {
   return (
     <div className="bg-black ">
@@ -238,30 +238,25 @@ const Footer = () => {
               Follow us
             </p>
           </div>
-          <div className="flex flex-col gap-1">
-            <Link to="">
+          <div className="flex flex-col gap-1 ">
+            <Link to="" className="flex gap-1 items-start">
+              <TwitterLogo size={30} color="#009ceb" />
               <div className=" hover:text-blue-600">
-                <p className="text-xs"> oct 29, 2019 </p>
-                <span className="font-bold text-white  hover:text-blue-600">
-                  After all is said and done, more is done
+                <p className="text-xs">@kennykenzy</p>
+                <span className=" text-white  hover:text-blue-600">
+                  Themeforest doesn't provide multiple-use license, you need to
+                  purchase a separate re… https://t.co/GI64fRkVvL
                 </span>
               </div>
             </Link>
 
-            <Link to="">
+            <Link to="" className="flex gap-1 items-start">
+              <TwitterLogo size={30} color="#009ceb" />
               <div className=" hover:text-blue-600">
-                <p className="text-xs"> oct 29, 2019 </p>
-                <span className="font-bold text-white  hover:text-blue-600">
-                  sucess is not a Good Teacher, failuire makes you humble
-                </span>
-              </div>
-            </Link>
-
-            <Link to="">
-              <div className=" hover:text-blue-600">
-                <p className="text-xs"> oct 29, 2019 </p>
-                <span className="font-bold text-white  hover:text-blue-600">
-                  enot who has much is rich, but who gives much
+                <p className="text-xs">@kennykenzy</p>
+                <span className=" text-white  hover:text-blue-600">
+                  Themeforest doesn't provide multiple-use license, you need to
+                  purchase a separate re… https://t.co/GI64fRkVvL
                 </span>
               </div>
             </Link>
