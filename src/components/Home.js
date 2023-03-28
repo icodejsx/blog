@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "./Footer";
 import HeroSection from "./HeroSection";
 import LifeStyle from "./LifeStyle";
 import MostViewed from "./MostViewed";
@@ -49,6 +50,8 @@ const Home = () => {
             <MostViewed />
           </div>
         </div>
+
+        <Footer />
       </section>
     </div>
   );

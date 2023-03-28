@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { GET_NEWS } from "../newsQueries";
-import { ArrowLeft, ArrowRight, Clock, UserCircle } from "phosphor-react";
+import { Clock, UserCircle, Lightning } from "phosphor-react";
 
 const WhatsNew = () => {
   const [content, updateContent] = useState("sports");
@@ -53,14 +53,14 @@ const WhatsNew = () => {
   console.log(SportNews);
 
   return (
-    <div className="container mx-auto flex flex-col   items-center gap-5 w-full  text-black p-9 ">
+    <div className="container mx-auto flex flex-col   items-center gap-5 w-full  text-black xl:p-9  ">
       <div className="flex flex-row justify-between  w-full border-b-2 border-gray-500 pb-2 ">
         <div>
-          <p className="font-bold text-xl text-green-500">Whats New</p>
+          <p className="font-bold text-xl text-purple-500">What's New</p>
         </div>
         <div className="flex flex-row items-center  gap-4 "></div>
       </div>
-      <div className="flex md:flex-row flex-col  flex-wrap justify-between ">
+      <div className="flex md:flex-row flex-col  flex-wrap gap-5  ">
         {SportNews.slice(0, 4).map((blog, index) => {
           const date = new Date(blog.time);
           const formattedDate = date.toLocaleString("en-US", {
@@ -70,18 +70,21 @@ const WhatsNew = () => {
           });
 
           return (
-            <div className="flex md:flex-col flex-col w-[20rem]">
-              <div className="relative md:w-[20rem] ">
+            <div className="flex md:flex-col flex-col w-[22rem]">
+              <div className="relative md:w-[22rem] ">
                 <img
                   src={blog.image.url}
                   alt=""
-                  className=" md:h-[13rem] md:w-[20rem] object-cover "
+                  className=" md:h-[13rem] md:w-[22rem] object-cover "
                   key={index}
                 />
 
                 <div className="absolute bottom-4  right-5  bg-purple-500 p-1 px-2 rounded-md">
                   <p className="text-white text-sm ">Travel</p>
                 </div>
+                <p className="bg-purple-500 h-9 w-9 rounded-full items-center justify-center flex absolute -top-2 left-5  ">
+                  <Lightning size={25} color="#ffffff" />
+                </p>
               </div>
 
               <div className=" flex flex-col gap-1 text-black ">

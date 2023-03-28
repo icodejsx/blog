@@ -2,7 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { GET_NEWS } from "../newsQueries";
-import { ArrowLeft, ArrowRight, Clock, UserCircle } from "phosphor-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  Clock,
+  UserCircle,
+  Lightning,
+} from "phosphor-react";
 
 const Tech = () => {
   const [content, updateContent] = useState("sports");
@@ -172,6 +178,7 @@ const Tech = () => {
                     </div>
                   </Link>
                 </div>
+
                 <div className="flex flex-col justify-start text-sm gap-2">
                   <div className="flex items-center gap-1">
                     <div className="flex items-center gap-2">
