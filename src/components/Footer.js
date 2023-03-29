@@ -304,7 +304,7 @@ const Footer = () => {
           className="p-2 bg-blue-500 text-white
         "
         >
-          &copy;Copyright 2023, All Rights Reserved
+          &copy;Copyright 2023, Asll Rights Reserved
         </p>
         <div></div>
       </div>
