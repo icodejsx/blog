@@ -68,7 +68,6 @@ const Head = () => {
           <Basketball size={20} className=" hover:text-red-500" />
           <Cloud size={20} className=" hover:text-red-500" />
           <InstagramLogo size={20} className=" hover:text-red-500" />
-
           <TiktokLogo size={20} className=" hover:text-red-500" />
           <User size={20} className=" hover:text-blue-700" />
           <List size={20} className=" hover:text-blue-700" />

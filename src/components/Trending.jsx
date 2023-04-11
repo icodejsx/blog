@@ -9,35 +9,16 @@ import {
   Lightning,
   UserCircle,
 } from "phosphor-react";
+import Sport from "./Sport";
 
 const Trending = () => {
-  const [content, updateContent] = useState("General");
+  const [content, updateContent] = useState("news");
 
   console.log(content);
 
-  useEffect(() => {
-    const onClick = (event) => {
-      updateContent(event.target.textContent);
-      let cName = document.querySelectorAll(".trend");
-      if (cName) {
-        cName.forEach((element) => {
-          element.classList.remove("bg-red-500", "text-white");
-        });
-        event.target.classList.add("bg-red-500", "text-white");
-      }
-    };
-
-    const dropdownElements = document.querySelectorAll(".trend");
-    dropdownElements.forEach((element) =>
-      element.addEventListener("click", onClick)
-    );
-
-    return () => {
-      dropdownElements.forEach((element) =>
-        element.removeEventListener("click", onClick)
-      );
-    };
-  }, []);
+  // logic for new selection
+  const handleNewsGen = () => updateContent("General");
+  const handleNewsSport = () => updateContent("sports");
 
   const { loading, error, data } = useQuery(GET_NEWS, {
     onSuccess: (data) => {
@@ -66,11 +47,15 @@ const Trending = () => {
         </div>
         <div className="flex flex-row items-center  gap-4 ">
           <div className="flex flex-row gap-3  ">
-            <Link className="text-red-500 text-xs p-1 rounded-sm trend">
+            <Link
+              onClick={handleNewsGen}
+              className="text-red-500 text-xs p-1 rounded-sm trend"
+            >
               All
             </Link>
             <div className="md:flex hidden flex-row gap-3 ">
               <Link
+                onClick={handleNewsSport}
                 to=""
                 className="hover:bg-red-500 hover:text-white text-xs p-1 rounded-sm trend "
               >
@@ -184,9 +169,9 @@ const Trending = () => {
             });
 
             return (
-              <div className="flex flex-row md:gap-4 gap-2 ">
-                <div className=" object-center ">
-                  <Link to={`/posts/${blog.id}`}>
+              <Link to={`/posts/${blog.id}`}>
+                <div className="flex flex-row md:gap-4 gap-2 ">
+                  <div className=" object-center ">
                     <div className="square-image-container2">
                       <img
                         className="square-image2 "
@@ -195,23 +180,25 @@ const Trending = () => {
                         key={index}
                       />
                     </div>
-                  </Link>
-                </div>
-                <div className="flex flex-col justify-start text-sm gap-2">
-                  <div className="flex items-center gap-1">
-                    <div className="flex items-center gap-2">
-                      <p className="bg-red-500 h-4 w-4 rounded-full items-center justify-center flex   ">
-                        <Lightning size={12} color="#ffffff" />
-                      </p>
-                      <Clock size={14} color="#000000" />
+                  </div>
+                  <div className="flex flex-col justify-start text-sm gap-2">
+                    <div className="flex items-center gap-1">
+                      <div className="flex items-center gap-2">
+                        <p className="bg-red-500 h-4 w-4 rounded-full items-center justify-center flex   ">
+                          <Lightning size={12} color="#ffffff" />
+                        </p>
+                        <Clock size={14} color="#000000" />
+                      </div>
+                      <p>{formattedDate}</p>
                     </div>
-                    <p>{formattedDate}</p>
-                  </div>
-                  <div className="font-bold hover:text-red-500">
-                    <p>{blog.heading}</p>
+                    <Link to={`/posts/${blog.id}`}>
+                      <div className="font-bold hover:text-red-500">
+                        <p>{blog.heading}</p>
+                      </div>
+                    </Link>
                   </div>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
