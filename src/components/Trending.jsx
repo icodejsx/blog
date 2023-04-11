@@ -20,6 +20,7 @@ const Trending = () => {
   const handleNewsGen = () => updateContent("General");
   const handleNewsSport = () => updateContent("sports");
 
+  // logiv for getting the news from the data vase
   const { loading, error, data } = useQuery(GET_NEWS, {
     onSuccess: (data) => {
       console.log(data);
