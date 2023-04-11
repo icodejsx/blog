@@ -64,9 +64,7 @@ const Head = () => {
         </div>
         <div className=" lg:flex flex-row gap-3 hidden ">
           <FacebookLogo size={20} className=" hover:text-blue-700" />
-
           <WhatsappLogo size={20} className=" hover:text-blue-500" />
-
           <Basketball size={20} className=" hover:text-red-500" />
           <Cloud size={20} className=" hover:text-red-500" />
           <InstagramLogo size={20} className=" hover:text-red-500" />

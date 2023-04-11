@@ -300,12 +300,10 @@ const Footer = () => {
       </div>
 
       <div className="flex md:px-20 p-6 bg-black">
-        <p
-          className="p-2 bg-blue-500 text-white
-        "
-        >
+        <p className="p-2 bg-blue-500 text-white">
           &copy;Copyright 2023, All Rights Reserved
         </p>
+
         <div></div>
       </div>
     </div>
