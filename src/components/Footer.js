@@ -264,13 +264,13 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex md:px-20 p-10  gap-20">
+      <div className="flex md:flex-row flex-col md:px-20 p-10 gap-10  lg:gap-20">
         <div className=" flex items-end">
           <h1 className="text-7xl text-white font-bold">Jannah</h1>
           <span className="text-4xl text-white">news</span>
         </div>
 
-        <div className=" w-96 text-sm">
+        <div className=" md:w-96 text-sm">
           <p>
             Jannah is a Clean Responsive WordPress Newspaper, Magazine, News and
             Blog theme. Packed with options that allow you to completely
@@ -278,7 +278,7 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="w-96">
+        <div className="md:w-96">
           {" "}
           <div>
             <label

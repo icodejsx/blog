@@ -46,7 +46,7 @@ const Home = () => {
           <div className="flex flex-col lg:w-2/3 w-full gap-14  ">
             <WhatsNew />
           </div>
-          <div className="flex flex-col lg:w-1/3  w-full ">
+          <div className="flex flex-col lg:w-1/3  w-full  ">
             <MostViewed />
           </div>
         </div>

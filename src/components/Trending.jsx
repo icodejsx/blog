@@ -9,10 +9,9 @@ import {
   Lightning,
   UserCircle,
 } from "phosphor-react";
-import Sport from "./Sport";
 
 const Trending = () => {
-  const [content, updateContent] = useState("news");
+  const [content, updateContent] = useState("sports");
 
   console.log(content);
 
