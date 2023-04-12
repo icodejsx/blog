@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <div className="container mx-auto flex md:px-5 px-3 xl:flex-row flex-col items-center gap-1">
       <div className=" xl:w-1/2  w-full ">
-        <div className="relative h-full ">
+        <div className="relative h-full object-cover ">
           <img
             src="https://media.istockphoto.com/id/1366052585/photo/shot-of-a-group-of-friends-hanging-out-before-working-out-together.jpg?s=612x612&w=0&k=20&c=rj7LgjUuXde0eLWikS1rvDnsKDdBotgsy9eM5HDzko0="
             alt=""
@@ -67,6 +67,7 @@ const HeroSection = () => {
             <img
               src="https://media.istockphoto.com/id/1353365157/photo/copy-space-shot-of-young-woman-lounging-on-sofa-with-hands-behind-head-and-daydreaming.jpg?s=612x612&w=0&k=20&c=gX4WnuUB_jmI066Iz7Tw50V6LOFVgO-t2G6NRcsz6os= "
               alt=""
+              className="object-cover"
             />
             <div className="absolute top-0 left-0 w-full h-full bg-black opacity-30"></div>
             <div className="absolute  md:top-5 md:left-6  top-3 left-4  bg-blue-700 p-1 px-3 rounded-md">
@@ -97,6 +98,7 @@ const HeroSection = () => {
             <img
               src="https://media.istockphoto.com/id/1382390344/photo/diverse-women-volunteers.jpg?s=612x612&w=0&k=20&c=z3AQ4oUUBOJlPHUAD03KN56ddnKglsIRlnmyqhiQuZc="
               alt=""
+              className="object-cover"
             />
 
             <div className="absolute top-0 left-0 w-full h-full bg-black opacity-30"></div>
