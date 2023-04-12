@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <div className="container mx-auto flex md:px-5 px-3 xl:flex-row flex-col items-center gap-1">
       <div className=" xl:w-1/2  w-full ">
-        <div className="relative h-full object-cover ">
+        <div className="relative h-full object-cover group ">
           <img
             src="https://media.istockphoto.com/id/1366052585/photo/shot-of-a-group-of-friends-hanging-out-before-working-out-together.jpg?s=612x612&w=0&k=20&c=rj7LgjUuXde0eLWikS1rvDnsKDdBotgsy9eM5HDzko0="
             alt=""
@@ -22,7 +22,7 @@ const HeroSection = () => {
               After all is said and done, more is done
             </h1>
 
-            <p className="font-medium text-sm xl:block hidden ">
+            <p className="font-medium text-sm xl:block hidden group ">
               stay focused and remember we design the best WordPress News and
               Magazine Themes. It’s the....
             </p>

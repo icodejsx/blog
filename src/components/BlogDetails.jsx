@@ -48,7 +48,7 @@ const BlogDetails = () => {
               </p>
             </div>
             <p className="leading-relaxed text-xl text-justify tracking-wide mt-1">
-              {dat && dat[0].newContent}
+              {dat && dat[0].newsContent}
             </p>
           </div>
         </div>
