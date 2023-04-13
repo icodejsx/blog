@@ -3,8 +3,6 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { GET_NEWS } from "../newsQueries";
 
-import { Link } from "react-router-dom";
-
 const BlogDetails = () => {
   const { id } = useParams();
   // const idNum = parseInt(id);
@@ -37,7 +35,7 @@ const BlogDetails = () => {
               {dat && dat[0].heading}
             </h2>
             <img
-              className="h-[500px] rounded w-full object-cover object-top mb-6"
+              className="md:h-[500px] rounded w-full object-cover object-top mb-6"
               src={dat && dat[0].image.url}
               alt="content"
             />
@@ -53,6 +51,10 @@ const BlogDetails = () => {
           </div>
         </div>
       </div>
+
+      {/* section part of  */}
+
+      <div className="col-span-1"></div>
     </section>
   );
 };
