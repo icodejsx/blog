@@ -3,7 +3,14 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { GET_NEWS } from "../newsQueries";
 import Socials from "./Socials";
-import { Lightning } from "phosphor-react";
+import {
+  Lightning,
+  MessengerLogo,
+  TwitterLogo,
+  ChatsCircle,
+  Fire,
+  Tag,
+} from "phosphor-react";
 
 const BlogDetails = () => {
   const { id } = useParams();
@@ -52,12 +59,33 @@ const BlogDetails = () => {
             Ten years after its formation
           </h1>
 
-          <div>
-            <img
-              src="/public/as.png"
-              alt="pro"
-              className="rounded-full h-10 w-10 object-cover"
-            />
+          <div className="flex gap-1 items-center justify-between">
+            <div className="flex gap-1 items-center">
+              <img
+                src="https://themes.tielabs.com/data/avatar-1.jpg"
+                alt="pro"
+                className="rounded-full h-10 w-10 object-cover"
+              />
+              <span className="">{dat && dat[0].author}</span>
+              <TwitterLogo weight="fill" />
+              <MessengerLogo weight="fill" />
+              <div className="flex gap-3 ml-5">
+                <p>Oct 25, 2016 </p>
+                <p>Last Updated: Nov 27, 2018</p>
+              </div>
+            </div>
+            <div className="flex gap-2 items-center">
+              <p className="flex gap-1 items-center">
+                <ChatsCircle size={20} color="#0a0a0a" weight="fill" /> 0
+              </p>
+              <p className="flex gap-1 items-center text-[#e90c0c]">
+                <Fire size={20} color="#e90c0c" weight="fill" /> 41,884
+              </p>
+
+              <p className="flex gap-1 items-center ">
+                <Tag size={20} color="black" weight="fill" /> 6 minutes read
+              </p>
+            </div>
           </div>
         </div>
         <div className=" border border-indigo-500/20 ">
@@ -84,6 +112,12 @@ const BlogDetails = () => {
 
       <div className="col-span-1">
         <Socials />
+
+        <img
+          src="https://jannah.tielabs.com/demo/wp-content/uploads/sites/8/2017/05/sidebar-1.jpg"
+          alt="ads"
+          className="p-7"
+        />
       </div>
     </section>
   );
