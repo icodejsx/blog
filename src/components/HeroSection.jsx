@@ -29,9 +29,9 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      {/*  */}
-      <div className=" xl:w-1/2 xl:h-1/2 flex gap-1 flex-col">
-        <div className="group relative w-full onhover hover:transition ease-in-out  delay-150 ho">
+
+      <div className=" xl:w-1/2 xl:h-1/2 flex gap-1 flex-col p-1">
+        <div className="group relative w-full hover:transition ease-in-out  delay-150 ho">
           <img
             src="https://media.istockphoto.com/id/507872584/photo/colorful-hot-air-balloons-over-green-rice-field.jpg?s=612x612&w=0&k=20&c=HZfr7MATl9WTTLTcxfqesX8J9ErLPuwkwP-QMQfkbWY="
             alt=""

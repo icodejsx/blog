@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { TwitterLogo } from "phosphor-react";
 const Footer = () => {
   return (
-    <div className=" bg-[#070505] ">
+    <div className=" bg-[#070505] text-white ">
       <div className="md:grid gap-3  md:grid-cols-4 w-full lg:px-20 p-10 flex flex-col ">
         <div className="col-span-1">
           <div className="">

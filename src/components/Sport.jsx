@@ -178,17 +178,19 @@ const Sport = () => {
                     </div>
                   </Link>
                 </div>
-                <div className="flex flex-col justify-start text-sm gap-2">
-                  <div className="flex items-center gap-1">
-                    <div className="flex items-center gap-2">
-                      <Clock size={14} color="#ffffff" />
+                <Link to={`/posts/${blog.id}`}>
+                  <div className="flex flex-col justify-start text-sm gap-2">
+                    <div className="flex items-center gap-1">
+                      <div className="flex items-center gap-2">
+                        <Clock size={14} color="#ffffff" />
+                      </div>
+                      <p>{formattedDate}</p>
                     </div>
-                    <p>{formattedDate}</p>
+                    <div className="font-bold hover:text-green-500">
+                      <p>{blog.heading}</p>
+                    </div>
                   </div>
-                  <div className="font-bold hover:text-green-500">
-                    <p>{blog.heading}</p>
-                  </div>
-                </div>
+                </Link>
               </div>
             );
           })}
