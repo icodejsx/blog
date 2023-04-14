@@ -12,7 +12,7 @@ import Post from "./components/Post";
 import SignUp from "./components/SignUp";
 
 import News from "./components/News";
-import Text from "./components/Textt";
+
 export const NewsContext = createContext();
 
 function App() {

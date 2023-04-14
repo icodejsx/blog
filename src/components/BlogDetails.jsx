@@ -10,6 +10,10 @@ import {
   ChatsCircle,
   Fire,
   Tag,
+  FacebookLogo,
+  PinterestLogo,
+  Spinner, Spiral,
+  ChartPie, CircleNotch, Campfire
 } from "phosphor-react";
 
 const BlogDetails = () => {
@@ -39,7 +43,7 @@ const BlogDetails = () => {
     <section className="grid md:grid-cols-3 gap-8  md:p-16">
       <div className="md:col-span-2">
         <div className="flex flex-col gap-6">
-          <div className="flex items-center gap-1 text-sm">
+          <div className="flex items-center gap-1 text-xs">
             <p className="text-white bg-yellow-700 p-1 rounded-md px-2 ">
               Life Style
             </p>
@@ -55,12 +59,12 @@ const BlogDetails = () => {
           <h2 className="text-5xl capitalize text-gray-900 font-medium title-font ">
             {dat && dat[0].heading}
           </h2>
-          <h1 className="text-2xl text-gray-2 f">
+          <h1 className="text-2xl text-gray-2">
             Ten years after its formation
           </h1>
 
-          <div className="flex gap-1 items-center justify-between">
-            <div className="flex gap-1 items-center">
+          <div className="flex gap-1 items-center justify-between text-sm">
+            <div className="flex gap-1 items-center text-center">
               <img
                 src="https://themes.tielabs.com/data/avatar-1.jpg"
                 alt="pro"
@@ -74,20 +78,66 @@ const BlogDetails = () => {
                 <p>Last Updated: Nov 27, 2018</p>
               </div>
             </div>
-            <div className="flex gap-2 items-center">
+            <div className="flex gap-3 items-center text-sm">
               <p className="flex gap-1 items-center">
-                <ChatsCircle size={20} color="#0a0a0a" weight="fill" /> 0
+                <ChatsCircle size={16} color="#0a0a0a" weight="fill" /> 0
               </p>
               <p className="flex gap-1 items-center text-[#e90c0c]">
-                <Fire size={20} color="#e90c0c" weight="fill" /> 41,884
+                <Fire size={16} color="#e90c0c" weight="fill" /> 41,884
               </p>
 
-              <p className="flex gap-1 items-center ">
-                <Tag size={20} color="black" weight="fill" /> 6 minutes read
+              <p className="flex gap-2 items-center ">
+                <Tag size={16} color="black" weight="fill" /> 6 minutes read
               </p>
             </div>
           </div>
         </div>
+        {/* 
+
+last part of the socials 
+
+ */}
+
+        <div className="flex px-20 my-4 gap-2">
+          <p className="bg-blue-600 hover:bg-blue-400 p-2 px-5 flex items-center text-white gap-2">
+            <FacebookLogo size={20} color="#f0efef" weight="fill" />
+            Facebook
+          </p>
+
+          <p className="bg-green-600/100 hover:bg-green-400 p-2 px-5 flex items-center text-white gap-2">
+            <TwitterLogo size={20} color="#f0efef" weight="fill" />
+            Twitter
+          </p>
+
+          <p className="bg-blue-400 hover:bg-blue-400 p-2 px-3 flex items-center text-white gap-2 font-bold">
+
+            in
+          </p>
+          <p className="bg-blue-900 hover:bg-blue-800 p-2 px-3 flex items-center text-white gap-2  font-extrabold">
+
+            t
+          </p>
+          <p className="bg-red-600 hover:bg-red-600 p-2 px-3 flex items-center text-white gap-2  font-extrabold">
+            <PinterestLogo size={20} color="#f0efef" weight="fill" />
+          </p>
+
+          <p className="bg-purple-600 hover:bg-purple-600 p-2 px-3 flex items-center text-white gap-2  font-extrabold">
+            <Spinner size={20} color="#faf9f9" weight="fill" />
+          </p>
+          <p className="bg-yellow-600 hover:bg-yellow-600 p-2 px-3 flex items-center text-white gap-2  font-extrabold">
+            <Spiral size={20} color="#faf9f9" weight="fill" />
+          </p>
+          <p className="bg-blue-900 hover:bg-blue-600 p-2 px-3 flex items-center text-white gap-2  font-extrabold">
+            <Campfire size={20} color="#faf9f9" weight="fill" />
+          </p>
+          <p className="bg-yellow-300 hover:bg-yellow-200 p-2 px-3 flex items-center text-white gap-2  font-extrabold">
+            <ChartPie size={20} color="#faf9f9" weight="fill" />
+          </p>
+          <p className="bg-purple-900 hover:bg-purple-600 p-2 px-3 flex items-center text-white gap-2  font-extrabold">
+            <CircleNotch size={20} color="#faf9f9" weight="fill" />
+          </p>
+        </div>
+
         <div className=" border border-indigo-500/20 ">
           <div className="bg-gray-100 rounded-lg">
             <img

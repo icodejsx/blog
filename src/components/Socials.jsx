@@ -38,6 +38,7 @@ const Socials = () => {
             </div>
           </div>
 
+
           <div className="w-1/2 flex flex-row items-center gap-3 bg-blue-500 text-white justify-start ">
             <div className="mx-5 flex-row flex items-center gap-3 py-1 ">
               <TwitterLogo size={28} color="#ffffff" />
@@ -50,6 +51,7 @@ const Socials = () => {
         </div>
 
         <div className="flex flex-row w-full gap-3">
+
           <div className="w-1/2 flex flex-row items-center gap-3 bg-red-600 text-white justify-start ">
             <div className="mx-5 flex-row flex items-center gap-3 py-1 ">
               <YoutubeLogo size={28} color="#ffffff" />
@@ -72,6 +74,7 @@ const Socials = () => {
         </div>
 
         <div className="flex flex-row w-full gap-3">
+
           <div className="w-1/2 flex flex-row items-center gap-3 bg-pink-600 text-white justify-start ">
             <div className="mx-5 flex-row flex items-center gap-3 py-1 ">
               <DribbbleLogo size={28} color="#ffffff" />
@@ -81,6 +84,7 @@ const Socials = () => {
               </div>
             </div>
           </div>
+
 
           <div className="w-1/2 flex flex-row items-center gap-3 bg-blue-400 text-white justify-start ">
             <div className="mx-5 flex-row flex items-center gap-3 py-1 ">
@@ -94,6 +98,7 @@ const Socials = () => {
         </div>
 
         <div className="flex flex-row w-full gap-3">
+
           <div className="w-1/2 flex flex-row items-center gap-3 bg-pink-400 text-white justify-start ">
             <div className="mx-5 flex-row flex items-center gap-3 py-1 ">
               <InstagramLogo size={28} color="#ffffff" />
@@ -104,6 +109,7 @@ const Socials = () => {
             </div>
           </div>
 
+
           <div className="w-1/2 flex flex-row items-center gap-3 bg-blue-300 text-white justify-start ">
             <div className="mx-5 flex-row flex items-center gap-3 py-1 ">
               <GithubLogo size={28} color="#ffffff" />
@@ -113,7 +119,10 @@ const Socials = () => {
               </div>
             </div>
           </div>
+
+
         </div>
+        <img src="https://jannah.tielabs.com/demo/wp-content/uploads/sites/8/2017/05/sidebar-1.jpg" alt="adds" className="mt-20" />
       </div>
     </div>
   );
