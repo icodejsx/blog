@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { GET_NEWS } from "../newsQueries";
-import { ArrowLeft, ArrowRight, Clock, Lightning } from "phosphor-react";
+import { ArrowLeft, ArrowRight, Clock, Lightning, EnvelopeSimple } from "phosphor-react";
 
 const Popular = () => {
     const [content, updateContent] = useState("politics");
@@ -111,6 +111,35 @@ const Popular = () => {
                             </div>
                         );
                     })}
+                </div>
+            </div>
+
+            <div className=" p-6 ">
+                <div className=" w-full flex flex-col items-center justify-center gap-3">
+                    <EnvelopeSimple size={80} color="#898080" weight="fill" />
+                    <p>With Product You Purchase</p>
+                    <p className="text-3xl font-bold text-center">Subscribe to our mailing list to get the new updates!</p>
+                    <p className="text-sm">Lorem ipsum dolor sit amet, consectetur.</p>
+                </div>
+                <div>
+                    <div className="w-80 mb-3">
+                        <label
+                            for="first_name"
+                            className="block mb-2 text-sm font-medium text-white"
+                        ></label>
+                        <input
+                            type="text"
+                            id="email"
+                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Enter your email"
+                            required
+                        />
+                    </div>
+                    <Link className="px-6 py-2 bg-blue-700 mt-2 text-white  flex items-center justify-center">
+                        Subscribe
+                    </Link>
+
+
                 </div>
             </div>
         </div>

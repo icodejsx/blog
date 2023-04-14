@@ -12,6 +12,7 @@ import Tech from "./Tech";
 import Trending from "./Trending";
 import WhatsNew from "./WhatsNew";
 import Popular from "./Popular";
+import Recent from "./Recent";
 
 const Home = () => {
   return (
@@ -40,7 +41,7 @@ const Home = () => {
             <Tech />
           </div>
           <div className="flex flex-col lg:w-1/3  w-full ">
-            <MostViewed />
+            <Recent />
           </div>
         </div>
 
