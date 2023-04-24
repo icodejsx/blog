@@ -3,6 +3,8 @@ import DropDown from "../dropDown/DropDown";
 
 const World = () => {
   return (
+    // see am naa
+
     <div className="lg:flex flex-row items-center justify-center hidden ">
       <div
         className="bg-black w-[77.5rem] border-t-4 border-blue-600"
