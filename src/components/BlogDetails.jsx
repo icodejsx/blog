@@ -47,13 +47,11 @@ const BlogDetails = () => {
     <div>
 
 
-      <section className="grid md:grid-cols-3 gap-8  md:p-16">
-        <div className="md:col-span-2">
+      <section className="grid lg:grid-cols-3 gap-8  lg:p-16 md:p-4 p-2">
+        <div className="lg:col-span-2">
           <div className="flex flex-col gap-6">
-            <div className="flex items-center gap-1 text-xs">
-              <p className="text-white bg-yellow-700 p-1 rounded-md px-2 ">
-                Life Style
-              </p>
+            <div className="flex items-center gap-1 text-xs mt-5 md:mt-0">
+              <p className="text-white bg-yellow-700 p-1 rounded-md px-2 "> Life Style</p>
               <p className="text-white bg-blue-700 p-1 rounded-md px-3">Travel</p>
               <p className="text-white bg-blue-600 p-1 rounded-md px-3">World</p>
             </div>
@@ -63,23 +61,26 @@ const BlogDetails = () => {
               </p>
               Trending
             </div>
-            <h2 className="text-5xl capitalize text-gray-900 font-medium title-font ">
+            <h2 className="md:text-5xl font-bold capitalize text-gray-900 md:font-medium title-font ">
               {dat && dat[0].heading}
             </h2>
-            <h1 className="text-2xl text-gray-2">
+            <h1 className="md:text-2xl text-gray-2">
               Ten years after its formation
             </h1>
 
-            <div className="flex gap-1 items-center justify-between text-sm">
-              <div className="flex gap-1 items-center text-center">
-                <img
-                  src="https://themes.tielabs.com/data/avatar-1.jpg"
-                  alt="pro"
-                  className="rounded-full h-10 w-10 object-cover"
-                />
-                <span className="">{dat && dat[0].author}</span>
-                <TwitterLogo weight="fill" />
-                <MessengerLogo weight="fill" />
+            <div className="flex gap-1 md:items-center justify-between text-sm lg:flex-row flex-col flex-wrap">
+              <div className="flex md:flex-row flex-col gap-1 md:items-center text-center">
+                <div className="flex gap-2 items-center">
+
+                  <img
+                    src="https://themes.tielabs.com/data/avatar-1.jpg"
+                    alt="pro"
+                    className="rounded-full h-10 w-10 object-cover"
+                  />
+                  <span className="">{dat && dat[0].author}</span>
+                  <TwitterLogo weight="fill" />
+                  <MessengerLogo weight="fill" />
+                </div>
                 <div className="flex gap-3 ml-5">
                   <p>Oct 25, 2016 </p>
                   <p>Last Updated: Nov 27, 2018</p>
@@ -105,7 +106,7 @@ last part of the socials
 
  */}
 
-          <div className="flex px-20 my-4 gap-2  ">
+          <div className="flex md:px-20 my-4 gap-2 flex-wrap  ">
             <p className="bg-blue-600 hover:bg-blue-400 p-2 px-5 flex items-center text-white gap-2">
               <FacebookLogo size={20} color="#f0efef" weight="fill" />
               Facebook
@@ -145,14 +146,14 @@ last part of the socials
             </p>
           </div>
 
-          <div className=" border border-indigo-500/20 ">
-            <div className="bg-gray-100 rounded-lg">
+          <div className=" border border-indigo-500/20 w-full">
+            <div className="bg-gray-100 rounded-lg w-full">
               <img
-                className="md:h-[500px] rounded w-full object-cover object-top mb-6"
+                className="md:h-[500px] rounded w-full object-cover object-top mb-6 "
                 src={dat && dat[0].image.url}
                 alt="content"
               />
-              <div className="flex gap-6 items-center my-6">
+              <div className="flex gap-6 items-center my-6 w-full">
                 <p className="flex items-center gap-2">
                   Author:
                   <span className="text-indigo-500">{dat && dat[0].author}</span>
@@ -169,6 +170,9 @@ last part of the socials
 
         <div className="lg:col-span-1 ">
           <Socials />
+          <div>
+
+          </div>
           <Popular />
 
         </div>
