@@ -61,14 +61,14 @@ const BlogDetails = () => {
               </p>
               Trending
             </div>
-            <h2 className="md:text-5xl font-bold capitalize text-gray-900 md:font-medium title-font ">
+            <h2 className="md:text-5xl text-3xl font-bold capitalize text-gray-900 md:font-medium title-font ">
               {dat && dat[0].heading}
             </h2>
             <h1 className="md:text-2xl text-gray-2">
               Ten years after its formation
             </h1>
 
-            <div className="flex gap-1 md:items-center justify-between text-sm lg:flex-row flex-col flex-wrap">
+            <div className="flex gap-1 lg:items-center justify-between text-sm lg:flex-row flex-col flex-wrap">
               <div className="flex md:flex-row flex-col gap-1 md:items-center text-center">
                 <div className="flex gap-2 items-center">
 
