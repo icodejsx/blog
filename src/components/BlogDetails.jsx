@@ -105,7 +105,7 @@ last part of the socials
 
  */}
 
-          <div className="flex px-20 my-4 gap-2">
+          <div className="flex px-20 my-4 gap-2  ">
             <p className="bg-blue-600 hover:bg-blue-400 p-2 px-5 flex items-center text-white gap-2">
               <FacebookLogo size={20} color="#f0efef" weight="fill" />
               Facebook
@@ -167,7 +167,7 @@ last part of the socials
 
         {/* section part of  */}
 
-        <div className="col-span-1">
+        <div className="lg:col-span-1 ">
           <Socials />
           <Popular />
 
