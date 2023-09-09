@@ -56,7 +56,7 @@ const Popular = () => {
     console.log(SportNews);
 
     return (
-        <div className="container mx-auto flex flex-col   items-center gap-5 w-full  text-black p-9 ">
+        <div className="container mx-auto flex flex-col   items-center gap-5 w-full  text-black lg:p-9 ">
             <div className="flex flex-row justify-between  w-full  pb-2 ">
                 <Link onClick={handleNewsPol} className=" border border-b-2 p-5 border-b-blue-500">
                     <p className="font-bold  text-blue-500">Recent</p>

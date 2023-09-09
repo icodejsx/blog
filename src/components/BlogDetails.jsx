@@ -106,7 +106,7 @@ last part of the socials
 
  */}
 
-          <div className="flex md:px-20 my-4 gap-2 flex-wrap  ">
+          <div className="flex lg:px-10  my-4 gap-2 flex-wrap  ">
             <p className="bg-blue-600 hover:bg-blue-400 p-2 px-5 flex items-center text-white gap-2">
               <FacebookLogo size={20} color="#f0efef" weight="fill" />
               Facebook
