@@ -44,10 +44,10 @@ const BlogDetails = () => {
   console.log(dat && dat[0]);
 
   return (
-    <div>
+    <div className="overflow-y-hidden  box-border">
 
 
-      <section className="grid lg:grid-cols-3 gap-8  lg:p-16 md:p-4 p-2">
+      <section className="grid lg:grid-cols-3 gap-8  lg:p-16 md:p-4 p-2  ">
         <div className="lg:col-span-2">
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-1 text-xs mt-5 md:mt-0">
